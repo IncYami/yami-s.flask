@@ -17,7 +17,7 @@ Audio:
 FLAC 2.0 ja-JP
 Subs:
 Yami pt-BR
-Hi10 en-US
+neko-kBaraka en-US
 ===
 
 ===Arquivos
