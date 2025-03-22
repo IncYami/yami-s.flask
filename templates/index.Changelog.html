@@ -1,0 +1,34 @@
+<!-- Seção de Changelog -->
+{% if anime.has_changelog and anime.changelog %}
+<div class="changelog-section">
+    <h5><i class="fas fa-history me-2"></i>Changelog</h5>
+    <div class="changelog-content">
+        {% set lines = anime.changelog.strip().split('\n') %}
+        {% for line in lines %}
+            {% if line.strip() %}
+                {% if '-' in line %}
+                    {% set parts = line.strip().split(':', 1) %}
+                    {% if parts|length > 1 %}
+                        {% set date_part = parts[0].strip().replace('-', '').strip() %}
+                        {% if date_part|length == 8 %}
+                            {% set formatted_date = date_part[6:] + "/" + date_part[4:6] + "/" + date_part[:4] %}
+                            <div class="changelog-header">{{ formatted_date }}</div>
+                        {% else %}
+                            <div class="changelog-header">{{ date_part }}</div>
+                        {% endif %}
+                        {% for entry in parts[1].strip().split(',') %}
+                            <div class="changelog-line">{{ entry.strip() }}</div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="changelog-line">{{ line.strip().replace('-', '') }}</div>
+                    {% endif %}
+                {% else %}
+                    <div class="changelog-line">{{ line.strip() }}</div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+</div>
+</div>
