@@ -30,6 +30,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@main
         with:
-          GITHUB_TOKEN: ${{ secrets.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           folder: build  # Diretório de saída do site estático
           branch: gh-pages  # Branch onde o site será publicado
