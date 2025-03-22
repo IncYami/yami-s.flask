@@ -1,16 +1,35 @@
-<!-- Navbar -->
+<!-- Navbar com Barra de Pesquisa usando apenas Bootstrap 5 -->
 <div class="container d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
     <img class="me-3" src="static/favicon.png" alt="" width="45" height="45">
     <div class="lh-1">
         <h1 class="h6 mb-0 text-white lh-1">Yami Studio</h1>
         <small>Index</small>
     </div>
+    
     <div class="ms-auto">
-        <div class="input-group">
-            <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar anime...">
-            <button class="btn btn-outline-light" type="button" id="clearSearch">
-                <i class="fas fa-times"></i>
-            </button>
+        <div class="dropdown">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar anime...">
+                <button class="btn btn-outline-light" type="button" id="clearSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-filter"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="filterDropdown">
+                    <li><h6 class="dropdown-header">Filtrar por status</h6></li>
+                    <li><button class="dropdown-item filter-btn" data-filter="all">Todos</button></li>
+                    <li><button class="dropdown-item filter-btn" data-filter="releasing">Em Lançamento</button></li>
+                    <li><button class="dropdown-item filter-btn" data-filter="batch">Batch</button></li>
+                    <li><button class="dropdown-item filter-btn" data-filter="rev">Em Revisão</button></li>
+                    <li><button class="dropdown-item filter-btn" data-filter="planning">Em Planejamento</button></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><button class="dropdown-item" id="resetFilters">Limpar filtros</button></li>
+                </ul>
+            </div>
+        </div>
+        <div id="filterInfo" class="mt-2 small text-light" style="display: none;">
+            <span id="filterBadges" class="d-flex gap-1 flex-wrap"></span>
         </div>
     </div>
 </div>

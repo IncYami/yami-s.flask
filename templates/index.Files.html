@@ -1,0 +1,49 @@
+<!-- Seção de Arquivos - Nova versão com links individuais -->
+<div class="row mt-4">
+    <div class="col-12">
+        <h4 class="mb-3"><i class="fas fa-file-alt me-2"></i>Lista de Arquivos</h4>
+        
+        {% if anime.files_with_links and anime.files_with_links|length > 0 %}
+        <!-- Exibir arquivos com links individuais usando List Group do Bootstrap (sem numeração) -->
+        <ul class="list-group mb-4">
+            {% for file in anime.files_with_links %}
+            <li class="list-group-item bg-dark text-light border-secondary py-2">
+                <div class="filename-container mb-2" title="{{ file.filename }}">
+                    {{ file.filename }}
+                </div>
+                <div class="download-buttons">
+                    {% if file.torrent %}
+                    <a href="{{ file.torrent }}" class="btn btn-sm btn-outline-danger me-1" target="_blank">
+                        <i class="fas fa-file-download"></i> Torrent
+                    </a>
+                    {% endif %}
+                    {% if file.magnet %}
+                    <a href="{{ file.magnet }}" class="btn btn-sm btn-outline-warning me-1" target="_blank">
+                        <i class="fas fa-magnet"></i> Magnet
+                    </a>
+                    {% endif %}
+                    {% if file.cloud %}
+                    <a href="{{ file.cloud }}" class="btn btn-sm btn-outline-primary" target="_blank">
+                        <i class="fas fa-cloud-download-alt"></i> Cloud
+                    </a>
+                    {% endif %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <!-- Nova exibição de arquivos para modo Batch e outros -->
+        <ul class="list-group mb-4">
+            {% for line in anime.files.strip().split('\n') %}
+            {% if line.strip() %}
+            <li class="list-group-item bg-dark text-light border-secondary py-2">
+                <div class="filename-container" title="{{ line.strip() }}">
+                    {{ line.strip() }}
+                </div>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>
