@@ -1,12 +1,12 @@
 ===Metadata
 Anime: Overlord II
 AnilistID: 98437
-Date: 2024-08-26
+Date: 2024-08-28
 Torrent: False
 Magnet: False
-Cloud: https://cloud.yami-s.com/0:/Overlord/[Yami]%20Overlord%20(BD%201080p%20HEVC%20FLAC)/
+Cloud: https://cloud.yami-s.com/0:/Overlord/[Yami]%20Overlord%20II%20(BD%201080p%20HEVC%20FLAC)/
 Releasing: False
-Changelog: True
+Changelog: False
 Batch: True
 ===
 
@@ -21,17 +21,17 @@ Hi10 en-US
 ===
 
 ===Arquivos
-[Yami] Overlord - 01 (BD 1080p HEVC FLAC) [C61C7AEA].mkv
-[Yami] Overlord - 02 (BD 1080p HEVC FLAC) [F13FAB3A].mkv
-[Yami] Overlord - 03 (BD 1080p HEVC FLAC) [1299AED9].mkv
-[Yami] Overlord - 04 (BD 1080p HEVC FLAC) [470570F6].mkv
-[Yami] Overlord - 05 (BD 1080p HEVC FLAC) [6FD55DDA].mkv
-[Yami] Overlord - 06 (BD 1080p HEVC FLAC) [4FBCBCBE].mkv
-[Yami] Overlord - 07 (BD 1080p HEVC FLAC) [B911E36A].mkv
-[Yami] Overlord - 08 (BD 1080p HEVC FLAC) [EFC368E1].mkv
-[Yami] Overlord - 09 (BD 1080p HEVC FLAC) [CE74CDEE].mkv
-[Yami] Overlord - 10 (BD 1080p HEVC FLAC) [9578CED2].mkv
-[Yami] Overlord - 11 (BD 1080p HEVC FLAC) [2B9F7434].mkv
-[Yami] Overlord - 12 (BD 1080p HEVC FLAC) [96926105].mkv
-[Yami] Overlord - 13 (BD 1080p HEVC FLAC) [6532312E].mkv
+[Yami] Overlord II - 01 (BD 1080p HEVC FLAC) [DF1854DA].mkv
+[Yami] Overlord II - 02 (BD 1080p HEVC FLAC) [BC400F2A].mkv
+[Yami] Overlord II - 03 (BD 1080p HEVC FLAC) [8BE1929E].mkv
+[Yami] Overlord II - 04 (BD 1080p HEVC FLAC) [E97CE140].mkv
+[Yami] Overlord II - 05 (BD 1080p HEVC FLAC) [9B839ECA].mkv
+[Yami] Overlord II - 06 (BD 1080p HEVC FLAC) [72F20079].mkv
+[Yami] Overlord II - 07 (BD 1080p HEVC FLAC) [B0A312CB].mkv
+[Yami] Overlord II - 08 (BD 1080p HEVC FLAC) [FD71A089].mkv
+[Yami] Overlord II - 09 (BD 1080p HEVC FLAC) [0C33BFE7].mkv
+[Yami] Overlord II - 10 (BD 1080p HEVC FLAC) [620223E6].mkv
+[Yami] Overlord II - 11 (BD 1080p HEVC FLAC) [C06B4AA8].mkv
+[Yami] Overlord II - 12 (BD 1080p HEVC FLAC) [026ED163].mkv
+[Yami] Overlord II - 13 (BD 1080p HEVC FLAC) [1D99A19A].mkv
 ===
