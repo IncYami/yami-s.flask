@@ -1,21 +1,26 @@
 // Função para compartilhar anime
-function shareAnime(event, id, animeName) {
+function shareAnime(event, id, animeName, anilistId) {
     event.stopPropagation(); // Previne que o card se expanda ao clicar no botão de compartilhar
     
-    // Criar URL com o nome do anime (formatado para URL)
+    // Criar URL com o ID do AniList
     const url = new URL(window.location.href);
-    const animeSlug = animeName.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-');
-    url.hash = 'anime-' + animeSlug;
+    url.hash = anilistId ? 'anilist-' + anilistId : 'anime-' + id;
     
     // Copiar URL para o clipboard
     navigator.clipboard.writeText(url.toString())
         .then(() => {
-            // Mostrar tooltip de sucesso
+            // Mostrar feedback diretamente no botão
             const shareBtn = event.currentTarget;
-            const originalText = shareBtn.innerHTML;
-            shareBtn.innerHTML = '<i class="fas fa-check me-1"></i> Copiado!';
+            const originalHTML = shareBtn.innerHTML;
+            
+            // Mudar o conteúdo do botão
+            shareBtn.innerHTML = '<i class="fas fa-check me-2"></i>Copiado!';
+            shareBtn.classList.add('bg-success');
+            
+            // Restaurar o botão após 2 segundos
             setTimeout(() => {
-                shareBtn.innerHTML = originalText;
+                shareBtn.innerHTML = originalHTML;
+                shareBtn.classList.remove('bg-success');
             }, 2000);
         })
         .catch(err => {
@@ -61,47 +66,67 @@ function fallbackCopyTextToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-// Função para verificar se há um hash na URL e expandir o card correspondente
+// Função para verificar se há um hash na URL e abrir o modal correspondente
 function checkUrlHash() {
     const hash = window.location.hash;
-    if (hash && hash.startsWith('#anime-')) {
-        const animeSlug = hash.replace('#anime-', '');
+    
+    // Verificar link com ID do AniList
+    if (hash && hash.startsWith('#anilist-')) {
+        const anilistId = hash.replace('#anilist-', '');
         
-        // Encontrar o card correspondente pelo nome do anime
         setTimeout(() => {
-            // Percorrer todos os cards para encontrar o que corresponde ao slug
-            const animeCards = document.querySelectorAll('.anime-item');
+            // Percorrer os cards para encontrar o que corresponde ao ID do AniList
+            const animeModals = document.querySelectorAll('.modal');
             let foundIndex = null;
             
-            animeCards.forEach((card, index) => {
-                const nameElement = card.querySelector('.card-title');
-                if (nameElement) {
-                    const cardName = nameElement.textContent.trim();
-                    const cardSlug = cardName.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-');
-                    
-                    if (cardSlug === animeSlug) {
-                        foundIndex = index + 1; // +1 porque os IDs começam em 1, não em 0
+            animeModals.forEach((modal) => {
+                const anilistLink = modal.querySelector('a[href^="https://anilist.co/anime/"]');
+                if (anilistLink) {
+                    const modalAnilistId = anilistLink.getAttribute('href').split('/').pop();
+                    if (modalAnilistId === anilistId) {
+                        const modalId = modal.id;
+                        foundIndex = modalId.split('-')[1]; // Extrair o index do ID do modal
                     }
                 }
             });
             
             if (foundIndex) {
-                const id = foundIndex;
-                const detailsEl = document.getElementById('details-' + id);
-                const iconEl = document.getElementById('icon-' + id);
-                const itemEl = document.getElementById('item-' + id);
+                openAnimeModal(foundIndex);
+            }
+        }, 300);
+    }
+    // Manter compatibilidade com o formato antigo (por ID do modal)
+    else if (hash && hash.startsWith('#anime-')) {
+        const animeId = hash.replace('#anime-', '');
+        
+        if (!isNaN(animeId)) {
+            // Se for um número, abrir diretamente
+            openAnimeModal(animeId);
+        } else {
+            // Busca pelo nome do anime (compatibilidade com versão anterior)
+            const animeSlug = animeId;
             
-            if (detailsEl && iconEl && itemEl) {
-                // Expandir o card
-                detailsEl.classList.add('open');
-                iconEl.classList.add('rotate');
-                itemEl.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+            setTimeout(() => {
+                const animeCards = document.querySelectorAll('.card');
+                let foundIndex = null;
                 
-                // Rolar para o item
-                itemEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            }
-        }, 300); // Pequeno atraso para garantir que a página já carregou
+                animeCards.forEach((card, index) => {
+                    const nameElement = card.querySelector('.card-title');
+                    if (nameElement) {
+                        const cardName = nameElement.textContent.trim();
+                        const cardSlug = cardName.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-');
+                        
+                        if (cardSlug === animeSlug) {
+                            foundIndex = index + 1;
+                        }
+                    }
+                });
+                
+                if (foundIndex) {
+                    openAnimeModal(foundIndex);
+                }
+            }, 300);
+        }
     }
 }
 

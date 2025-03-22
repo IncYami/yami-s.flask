@@ -1,8 +1,10 @@
+/* Core styling - keeping this */
 body {
     background-color: #121212;
     color: #e0e0e0;
 }
 
+/* Card styling - keeping this as it's used in the card component */
 .anime-card {
     background-size: cover;
     background-position: center;
@@ -38,6 +40,7 @@ body {
     font-size: 1.1rem;
 }
 
+/* Accordion styling for anime details - keeping this */
 .anime-details {
     max-height: 0;
     overflow: hidden;
@@ -57,6 +60,7 @@ body {
     border-radius: 0 0 5px 5px;
 }
 
+/* File display styling - keeping this */
 .anime-files {
     padding: 15px;
     background-color: #2a2a2a;
@@ -70,6 +74,7 @@ body {
     line-height: 1.5;
 }
 
+/* Changelog section - keeping this */
 .changelog-section {
     margin-top: 1.5rem;
     background-color: #2a2a2a;
@@ -117,7 +122,7 @@ body {
     line-height: 1.5;
 }
 
-/* Estilos melhorados para a seção de Info */
+/* Info section styling - keeping this */
 .info-section {
     margin-top: 1.5rem;
     background-color: #2a2a2a;
@@ -198,8 +203,8 @@ body {
     color: #ccc;
     white-space: nowrap;
 }
-/*END*/
 
+/* Download button styling - keeping this */
 .download-btn {
     transition: all 0.2s;
     font-size: 0.8rem;
@@ -210,6 +215,7 @@ body {
     transform: translateY(-3px);
 }
 
+/* Banner styling - keeping this */
 .banner {
     background-color: #1a1a2e;
     color: white;
@@ -239,219 +245,29 @@ body {
     transform: rotate(180deg);
 }
 
-.date-badge {
-    font-size: 0.75rem;
-    display: inline-block;
-    margin-right: 0.5rem;
+/* Card hover effects - keeping this */
+.card {
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.update-badge {
-    background-color: #ffc107;
-    color: #000;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    margin-left: 0.5rem;
-    animation: pulse 1.5s infinite;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Badge para projetos em lançamento */
-.releasing-badge {
-    background-color: #28a745;
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    margin-left: 0.5rem;
-    animation: pulse 1.5s infinite;
+.card:hover .fa-external-link-alt {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
 }
 
-/* Badge para projetos em batch */
-.batch-badge {
-    background-color: #0d6efd;
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    margin-left: 0.5rem;
-}
-
-/* Badge para projetos em revisão (vermelho) */
-.rev-badge {
-    background-color: #dc3545;
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    margin-left: 0.5rem;
-    animation: pulse 1.5s infinite;
-}
-
-/* Badge para projetos em planejamento (ciano) */
-.planning-badge {
-    background-color: #17a2b8;
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    margin-left: 0.5rem;
+/* Animation for pulse - keeping this since it's used in templates */
+.animate-pulse {
     animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.update-badge-expanded {
-    background-color: #ffc107;
-    color: #000;
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.25rem;
-    animation: pulse 1.5s infinite;
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-/* Versões expandidas das badges */
-.releasing-badge-expanded {
-    background-color: #28a745;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.25rem;
-    animation: pulse 1.5s infinite;
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-.batch-badge-expanded {
-    background-color: #0d6efd;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-/* Versões expandidas das novas badges */
-.rev-badge-expanded {
-    background-color: #dc3545;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.25rem;
-    animation: pulse 1.5s infinite;
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-.planning-badge-expanded {
-    background-color: #17a2b8;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.25rem;
-    animation: pulse 1.5s infinite;
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-.container {
-    max-width: 800px; /* Reduzir a largura do site */
-}
-
-.footer {
-    background-color: #1a1a2e;
-    color: #a0a0a0;
-    padding: 1rem 0;
-    margin-top: 3rem;
-}
-
-/* Estilos para o List Group e botões */
-.list-group-item {
-    padding: 0.6rem 0.75rem;
-}
-
-.filename-container {
-    font-family: monospace;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    overflow-x: auto;
-    color: #e0e0e0;
-    padding-bottom: 0.3rem;
-    /* Esconde a barra de rolagem mas mantém a funcionalidade */
-    scrollbar-width: thin;
-    scrollbar-color: #444 #222;
-}
-
-/* Personaliza a barra de rolagem para Chrome/Safari */
-.filename-container::-webkit-scrollbar {
-    height: 4px;
-}
-
-.filename-container::-webkit-scrollbar-track {
-    background: #222;
-    border-radius: 4px;
-}
-
-.filename-container::-webkit-scrollbar-thumb {
-    background: #444;
-    border-radius: 4px;
-}
-
-.download-buttons {
-    display: flex;
-    gap: 6px;
-}
-
-.list-group-item .btn-sm {
-    transition: all 0.2s;
-    border-width: 1px;
-    padding: 0.2rem 0.5rem;
-    font-size: 0.75rem;
-}
-
-.list-group-item .btn-sm:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.btn-outline-danger {
-    color: #f57e7e;
-    border-color: #f57e7e;
-}
-
-.btn-outline-danger:hover {
-    background-color: #f57e7e;
-    color: #fff;
-}
-
-.btn-outline-warning {
-    color: #ffd75e;
-    border-color: #ffd75e;
-}
-
-.btn-outline-warning:hover {
-    background-color: #ffd75e;
-    color: #212529;
-}
-
-.btn-outline-primary {
-    color: #6ea8fe;
-    border-color: #6ea8fe;
-}
-
-.btn-outline-primary:hover {
-    background-color: #6ea8fe;
-    color: #212529;
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
