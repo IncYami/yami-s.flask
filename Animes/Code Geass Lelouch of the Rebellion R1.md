@@ -1,7 +1,7 @@
 ===Metadata
 Anime: Code Geass Lelouch of the Rebellion R1
 AnilistID: 1575
-Date: 2025-03-20
+Date: 2025-03-22
 Torrent: False
 Magnet: False
 Cloud: False
@@ -33,6 +33,6 @@ CBM (Stereo) en-US
 
 ===Arquivos
 [Yami] Code Geass Lelouch of the Rebellion R1 - 01 (BD 1080p x264 FLAC) [D5699C96].mkv
-Torrent: https://nyaa.si/view/1950179
-Magnet: magnet:?xt=urn:btih:29a1225ccbe548deaaf05c05bd0ca4469208411c&dn=%5BSubsPlus%2B%5D%20From%20Bureaucrat%20to%20Villainess%20-%20Dad%27s%20Been%20Reincarnated%21%20-%20S01E11%20%28AMZN%20WEB-DL%201080p%20AVC%20AAC%29%20%7C%20Akuyaku%20Reijou%20Tensei%20Ojisan&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
+Torrent: https://nyaa.si/download/1950706.torrent
+Magnet: magnet:?xt=urn:btih:eb68129410df6b7475323994cd4cae6ae340fe82&dn=%5BYami%5D%20Code%20Geass%20Lelouch%20of%20the%20Rebellion%20R1%20-%2001%20%28BD%201080p%20x264%20FLAC%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
 ===
