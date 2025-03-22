@@ -34,8 +34,8 @@ def parse_markdown_file(file_path):
         'files_with_links': []
     }
     
-    # Extrair seção de metadados
-    metadata_match = re.search(r'===Metadata\s*(.*?)===', content, re.DOTALL)
+    # Extrair seção de metadados usando o novo formato ```Metadata ```
+    metadata_match = re.search(r'```Metadata\s*(.*?)```', content, re.DOTALL)
     if metadata_match:
         metadata_text = metadata_match.group(1).strip()
         
@@ -83,11 +83,8 @@ def parse_markdown_file(file_path):
         if planning_match:
             anime_info['planning'] = planning_match.group(1).strip().lower() == 'true'
     
-    # Extrair seção de Info com padrão mais flexível
-    # Esta nova expressão regular captura tudo entre ===Info e a próxima seção ou final do arquivo
-    # e aceita variações como **===** ou === no fim
-    # Extrair seção de Info e organizar os dados
-    info_pattern = r'===Info\s*(.*?)(?:===|$)'
+    # Extrair seção de Info com o novo formato ```Info ```
+    info_pattern = r'```Info\s*(.*?)```'
     info_match = re.search(info_pattern, content, re.DOTALL)
     if info_match:
         info_text = info_match.group(1).strip()
@@ -113,11 +110,9 @@ def parse_markdown_file(file_path):
         grouped_info['Video'] = " ".join(grouped_info['Video'])
 
         anime_info['info'] = grouped_info  # Agora armazenamos um dicionário correto
-
-
     
-    # Extrair seção de Changelog com padrão similar
-    changelog_pattern = r'===Changelog\s*(.*?)(?:\*\*===\*\*|\*===\*|===(?!Info|Changelog|Arquivos)|$)'
+    # Extrair seção de Changelog com o novo formato ```Changelog ```
+    changelog_pattern = r'```Changelog\s*(.*?)```'
     changelog_match = re.search(changelog_pattern, content, re.DOTALL)
     if changelog_match and anime_info['has_changelog']:
         changelog_content = changelog_match.group(1).strip()
@@ -129,8 +124,8 @@ def parse_markdown_file(file_path):
         if dates:
             anime_info['last_update'] = dates[0]  # A primeira data geralmente é a mais recente
     
-    # Extrair seção de Arquivos com padrão similar
-    files_pattern = r'===Arquivos\s*(.*?)(?:\*\*===\*\*|\*===\*|===(?!Info|Changelog|Arquivos)|$)'
+    # Extrair seção de Arquivos com o novo formato ```Arquivos ```
+    files_pattern = r'```Arquivos\s*(.*?)```'
     files_match = re.search(files_pattern, content, re.DOTALL)
     if files_match:
         files_content = files_match.group(1).strip()

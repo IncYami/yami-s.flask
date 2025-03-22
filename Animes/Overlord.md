@@ -1,4 +1,4 @@
-===Metadata
+```Metadata
 Anime: Overlord
 AnilistID: 20832
 Date: 2024-08-26
@@ -8,9 +8,9 @@ Cloud: https://cloud.yami-s.com/0:/Overlord/[Yami]%20Overlord%20(BD%201080p%20HE
 Releasing: False
 Changelog: True
 Batch: True
-===
+```
 
-===Info
+```Info
 Video:
 BDRIP 1080p HEVC x265 10-Bits [sam]
 Audio:
@@ -18,9 +18,9 @@ FLAC 2.0 ja-JP
 Subs:
 Yami pt-BR
 Hi10 en-US
-===
+```
 
-===Arquivos
+```Arquivos
 [Yami] Overlord - 01 (BD 1080p HEVC FLAC) [C61C7AEA].mkv
 [Yami] Overlord - 02 (BD 1080p HEVC FLAC) [F13FAB3A].mkv
 [Yami] Overlord - 03 (BD 1080p HEVC FLAC) [1299AED9].mkv
@@ -34,4 +34,4 @@ Hi10 en-US
 [Yami] Overlord - 11 (BD 1080p HEVC FLAC) [2B9F7434].mkv
 [Yami] Overlord - 12 (BD 1080p HEVC FLAC) [96926105].mkv
 [Yami] Overlord - 13 (BD 1080p HEVC FLAC) [6532312E].mkv
-===
+```

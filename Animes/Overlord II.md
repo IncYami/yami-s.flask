@@ -1,4 +1,4 @@
-===Metadata
+```Metadata
 Anime: Overlord II
 AnilistID: 98437
 Date: 2024-08-28
@@ -8,9 +8,9 @@ Cloud: https://cloud.yami-s.com/0:/Overlord/[Yami]%20Overlord%20II%20(BD%201080p
 Releasing: False
 Changelog: False
 Batch: True
-===
+```
 
-===Info
+```Info
 Video:
 BDRIP 1080p HEVC x265 10-Bits [sam]
 Audio:
@@ -18,9 +18,9 @@ FLAC 2.0 ja-JP
 Subs:
 Yami pt-BR
 neko-kBaraka en-US
-===
+```
 
-===Arquivos
+```Arquivos
 [Yami] Overlord II - 01 (BD 1080p HEVC FLAC) [DF1854DA].mkv
 [Yami] Overlord II - 02 (BD 1080p HEVC FLAC) [BC400F2A].mkv
 [Yami] Overlord II - 03 (BD 1080p HEVC FLAC) [8BE1929E].mkv
@@ -34,4 +34,4 @@ neko-kBaraka en-US
 [Yami] Overlord II - 11 (BD 1080p HEVC FLAC) [C06B4AA8].mkv
 [Yami] Overlord II - 12 (BD 1080p HEVC FLAC) [026ED163].mkv
 [Yami] Overlord II - 13 (BD 1080p HEVC FLAC) [1D99A19A].mkv
-===
+```
