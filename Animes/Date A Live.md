@@ -2,8 +2,8 @@
 Anime: Date A Live (DC)
 AnilistID: 15583
 Date: 2025-03-24
-Torrent: True
-Magnet: True
+Torrent: https://nyaa.si/download/1951642.torrent
+Magnet: magnet:?xt=urn:btih:a50f121deeb50c02285693ad672bcdfe3bfe8be8&dn=%5BYami%5D%20Date%20A%20Live%20%28DC%29%20%28BD%201080p%20x264%20FLAC%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
 Cloud: False
 Releasing: True
 Changelog: True
@@ -17,6 +17,10 @@ Audio:
 FLAC 2.0 ja-JP
 Subs:
 Yami pt-BR
+```
+
+```Changelog
+- 2025-03-24: Padronizado fontes e estilos, Corrigido erros encontrados
 ```
 
 ```Arquivos
