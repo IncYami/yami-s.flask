@@ -7,7 +7,7 @@ Magnet: magnet:?xt=urn:btih:827fdab0b1e26b019a057c3729e941e9dcfab309&dn=%5BYami%
 Cloud: False
 Releasing: True
 Changelog: True
-Batch: False
+Batch: True
 Rev: False
 Planning: False
 ```
