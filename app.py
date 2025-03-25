@@ -5,8 +5,11 @@ import re
 import requests
 import json
 from datetime import datetime
+from API.AniListCache import ImageCache
 
 app = Flask(__name__)
+# Initialize the image cache
+image_cache = ImageCache()
 
 def parse_markdown_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -154,13 +157,22 @@ def parse_markdown_file(file_path):
                 elif line.startswith('Cloud:'):
                     current_file['cloud'] = line[6:].strip()
     
-    # Buscar informações do anime no Anilist
+    # Buscar informações do anime no Anilist usando o cache
     if anime_info['AniListID']:
         anime_info['image_url'], anime_info['banner_url'] = get_anime_images(anime_info['AniListID'])
     
     return anime_info
 
 def get_anime_images(anilist_id):
+    """Get anime images from cache or fetch from AniList API if not cached."""
+    # Check cache first
+    cached_images = image_cache.get(anilist_id)
+    if cached_images:
+        print(f"Using cached images for AniList ID {anilist_id}")
+        return cached_images['cover_image'], cached_images['banner_image']
+    
+    # If not in cache, fetch from API
+    print(f"Fetching images from AniList API for ID {anilist_id}")
     query = '''
     query ($id: Int) {
         Media(id: $id, type: ANIME) {
@@ -186,6 +198,9 @@ def get_anime_images(anilist_id):
             cover_image = media_data.get('coverImage', {}).get('extraLarge')
             banner_image = media_data.get('bannerImage')
             
+            # Cache the results
+            image_cache.set(anilist_id, cover_image, banner_image)
+            
             return cover_image, banner_image
     except Exception as e:
         print(f"Erro ao buscar imagens do AniList: {e}")
@@ -194,6 +209,11 @@ def get_anime_images(anilist_id):
 
 @app.route('/')
 def index():
+    # Clear expired cache entries on page load
+    expired_count = image_cache.clear_expired()
+    if expired_count > 0:
+        print(f"Cleared {expired_count} expired cache entries")
+    
     anime_projects = []
     markdown_dir = os.path.join(os.path.dirname(__file__), 'Animes')
     

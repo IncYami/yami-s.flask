@@ -43,20 +43,24 @@
                                 
                                 <!-- Badges como indicadores de status, na parte superior direita -->
                                 <div class="position-absolute top-0 end-0 m-2 d-flex flex-wrap gap-1">
+                                    {% if anime.last_update %}
+                                    <span class="badge bg-warning text-dark animate-pulse"><i class="fas fa-sync-alt"></i></span>
+                                    {% endif %}
+
                                     {% if anime.releasing %}
                                     <span class="badge bg-success animate-pulse"><i class="fas fa-film"></i></span>
                                     {% endif %}
+
                                     {% if anime.batch %}
                                     <span class="badge bg-primary"><i class="fas fa-box"></i></span>
                                     {% endif %}
+
                                     {% if anime.rev %}
-                                    <span class="badge bg-danger"><i class="fas fa-edit"></i></span>
+                                    <span class="badge bg-danger animate-pulse"><i class="fas fa-edit"></i></span>
                                     {% endif %}
+
                                     {% if anime.planning %}
                                     <span class="badge bg-info"><i class="fas fa-clipboard-list"></i></span>
-                                    {% endif %}
-                                    {% if anime.last_update %}
-                                    <span class="badge bg-warning text-dark animate-pulse"><i class="fas fa-sync-alt"></i></span>
                                     {% endif %}
                                 </div>
                             </div>
