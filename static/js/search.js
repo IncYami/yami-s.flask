@@ -1,91 +1,175 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("searchInput");
-    const clearSearch = document.getElementById("clearSearch");
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const resetFilters = document.getElementById("resetFilters");
-    const cards = document.querySelectorAll(".card");
-    const animeContainer = document.querySelector(".container.mb-5 .row .col-12");
+// Script para manipular pesquisa, filtros e interações com o navbar
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do DOM
+    const searchInput = document.getElementById('searchInput');
+    const clearSearchBtn = document.getElementById('clearSearch');
+    const resetFiltersBtn = document.getElementById('resetFilters');
+    const clearAllFiltersBtn = document.getElementById('clearAllFilters');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const filterInfo = document.getElementById('filterInfo');
+    const filterBadges = document.getElementById('filterBadges');
+    const animeCards = document.querySelectorAll('.col');
     
-    function filterCards() {
-        const searchText = searchInput.value.toLowerCase();
-        const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
-        let hasResults = false;
+    // Armazenar filtros ativos
+    let activeFilters = [];
+    
+    // Função para aplicar filtros
+    function applyFilters() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
         
-        cards.forEach(card => {
-            const title = card.querySelector(".card-title").textContent.toLowerCase();
-            const hasFilter = activeFilter === "all" || card.querySelector(`.badge.bg-${getBadgeColor(activeFilter)}`);
-            const isVisible = title.includes(searchText) && hasFilter;
-            card.parentElement.style.display = isVisible ? "block" : "none";
+        animeCards.forEach(card => {
+            const titleElement = card.querySelector('.card-title');
+            if (!titleElement) return;
             
-            if (isVisible) {
-                hasResults = true;
+            const title = titleElement.textContent.toLowerCase();
+            let matchesSearch = true;
+            let matchesFilters = true;
+            
+            // Verificar texto de pesquisa
+            if (searchTerm && !title.includes(searchTerm)) {
+                matchesSearch = false;
+            }
+            
+            // Verificar filtros ativos
+            if (activeFilters.length > 0) {
+                matchesFilters = activeFilters.some(filter => {
+                    if (filter === 'all') return true;
+                    
+                    const hasReleasing = card.querySelector('.badge.bg-success') !== null;
+                    const hasBatch = card.querySelector('.badge.bg-primary') !== null;
+                    const hasRev = card.querySelector('.badge.bg-danger') !== null;
+                    const hasPlanning = card.querySelector('.badge.bg-info') !== null;
+                    
+                    switch (filter) {
+                        case 'releasing': return hasReleasing;
+                        case 'batch': return hasBatch;
+                        case 'rev': return hasRev;
+                        case 'planning': return hasPlanning;
+                        default: return false;
+                    }
+                });
+            }
+            
+            // Mostrar ou esconder com base nos critérios combinados
+            if (matchesSearch && matchesFilters) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
             }
         });
         
-        // Mostrar mensagem se não houver resultados
-        const existingMessage = document.getElementById("noResultsMessage");
-        if (!hasResults && (searchText !== "" || activeFilter !== "all")) {
-            if (!existingMessage) {
-                const message = document.createElement("div");
-                message.id = "noResultsMessage";
-                message.className = "text-center mt-4 mb-4 p-3 bg-dark rounded border border-secondary";
-                message.innerHTML = `
-                    <h3>Nenhum resultado encontrado</h3>
-                    <p>Tente usar termos diferentes na sua pesquisa ou ajuste os filtros.</p>
-                    <button class="btn btn-outline-light mt-2" id="resetAllBtn">
-                        <i class="fas fa-sync-alt me-2"></i>Limpar Todos os Filtros
-                    </button>
-                `;
-                animeContainer.appendChild(message);
-                
-                // Adicionar listener para o botão de reset
-                document.getElementById("resetAllBtn").addEventListener("click", function() {
-                    searchInput.value = "";
-                    filterButtons.forEach(btn => btn.classList.remove("active"));
-                    document.querySelector('[data-filter="all"]').classList.add("active");
-                    filterCards();
-                });
+        // Atualizar UI dos filtros
+        updateFilterBadges();
+    }
+    
+    // Atualizar os badges de filtro
+    function updateFilterBadges() {
+        // Limpar badges existentes
+        filterBadges.innerHTML = '';
+        
+        // Adicionar badge para texto de pesquisa se houver
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+            const searchBadge = document.createElement('span');
+            searchBadge.className = 'badge bg-primary';
+            searchBadge.innerHTML = `Busca: ${searchTerm} <i class="fas fa-times ms-1" data-search="clear"></i>`;
+            searchBadge.querySelector('i').addEventListener('click', () => {
+                searchInput.value = '';
+                applyFilters();
+            });
+            filterBadges.appendChild(searchBadge);
+        }
+        
+        // Adicionar badges para cada filtro ativo
+        activeFilters.forEach(filter => {
+            if (filter === 'all') return;
+            
+            const filterBadge = document.createElement('span');
+            filterBadge.className = 'badge bg-secondary';
+            
+            let filterText = '';
+            switch (filter) {
+                case 'releasing': filterText = 'Em Lançamento'; break;
+                case 'batch': filterText = 'Batch'; break;
+                case 'rev': filterText = 'Em Revisão'; break;
+                case 'planning': filterText = 'Em Planejamento'; break;
+                default: filterText = filter;
             }
-        } else if (existingMessage) {
-            existingMessage.remove();
+            
+            filterBadge.innerHTML = `${filterText} <i class="fas fa-times ms-1" data-filter="${filter}"></i>`;
+            filterBadge.querySelector('i').addEventListener('click', () => {
+                // Remover esse filtro
+                activeFilters = activeFilters.filter(f => f !== filter);
+                applyFilters();
+            });
+            
+            filterBadges.appendChild(filterBadge);
+        });
+        
+        // Mostrar ou esconder a área de filtros
+        if (searchTerm || activeFilters.length > 0) {
+            filterInfo.style.display = 'block';
+        } else {
+            filterInfo.style.display = 'none';
         }
     }
     
-    function getBadgeColor(filter) {
-        const colors = {
-            "releasing": "success",
-            "batch": "primary",
-            "rev": "danger",
-            "planning": "info"
-        };
-        return colors[filter] || "";
-    }
+    // Event listeners
     
-    searchInput.addEventListener("input", filterCards);
+    // Pesquisa
+    searchInput.addEventListener('input', applyFilters);
     
-    clearSearch.addEventListener("click", () => {
-        searchInput.value = "";
-        filterCards();
+    // Limpar pesquisa
+    clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        applyFilters();
     });
     
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-            filterCards();
+    // Aplicar filtro
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+            
+            // Se for um filtro existente, remova-o
+            if (activeFilters.includes(filter)) {
+                activeFilters = activeFilters.filter(f => f !== filter);
+            } else {
+                // Caso contrário, adicione-o
+                activeFilters.push(filter);
+            }
+            
+            applyFilters();
         });
     });
     
-    resetFilters.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        document.querySelector('[data-filter="all"]').classList.add("active");
-        filterCards();
+    // Resetar filtros
+    resetFiltersBtn.addEventListener('click', () => {
+        activeFilters = [];
+        applyFilters();
     });
     
-    // Inicializar filtro "Todos" como ativo
-    if (!document.querySelector(".filter-btn.active")) {
-        document.querySelector('[data-filter="all"]').classList.add("active");
-    }
+    // Limpar todos os filtros
+    clearAllFiltersBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        activeFilters = [];
+        applyFilters();
+    });
     
-    filterCards();
+    // Detectar pressionamento de tecla Escape para limpar pesquisa
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            searchInput.value = '';
+            applyFilters();
+        }
+    });
+    
+    // Efeito de navbar scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-shrink');
+        } else {
+            navbar.classList.remove('navbar-shrink');
+        }
+    });
 });

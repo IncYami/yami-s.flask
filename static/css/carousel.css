@@ -1,0 +1,79 @@
+/* Adicione este CSS ao seu arquivo custom.css para as melhorias do carrossel */
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo para o carrossel */
+.carousel-banner {
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* Controles customizados do carrossel em ROXO */
+.carousel-control-purple {
+    width: 5%;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+/* Cor roxa personalizada para os controles */
+.carousel-control-purple .carousel-control-prev-icon,
+.carousel-control-purple .carousel-control-next-icon {
+    background-color: rgba(111, 66, 193, 0.8); /* Cor roxa */
+    border-radius: 50%;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-purple:hover .carousel-control-prev-icon,
+.carousel-control-purple:hover .carousel-control-next-icon {
+    background-color: rgba(111, 66, 193, 1); /* Roxo mais forte no hover */
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Indicadores personalizados para o carrossel */
+.carousel-indicators {
+    z-index: 10;
+    bottom: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    border: 2px solid rgba(111, 66, 193, 0.3);
+}
+
+.carousel-indicators .active {
+    background-color: rgba(111, 66, 193, 0.9);
+    transform: scale(1.2);
+}
+
+/* Efeito de gradiente na parte inferior da imagem do banner */
+.carousel-item .carousel-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.9) 100%);
+}
+
+.bg-purple {
+    background-color: #6f42c1;
+  }

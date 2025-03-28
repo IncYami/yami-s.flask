@@ -8,107 +8,526 @@
     
     <!-- Bootstrap 5 CSS -->
     <link href="static/css/bootstrap.css" rel="stylesheet">
-    <link href="static/css/offcanvas-navbar.css" rel="stylesheet">
     <link href="static/css/custom.css" rel="stylesheet">
+    <link href="static/css/carousel.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="static/css/font-awesome.all.css">
 </head>
 
 <body>
-    <!-- Card -->
-    <!-- Contact Card -->
-<div class="container mb-4">
-    <div class="card border-0 shadow-sm">
-        <div class="card-body p-0">
-            <div class="row g-0">
-                <!-- Left side: Contact Info -->
-                <div class="col-md-6 p-4">
-                    <h4 class="card-title fw-bold mb-3">
-                        <i class="fas fa-address-card me-2"></i>Contato Yami Studio
-                    </h4>
-                    <p class="card-text">
-                        Bem-vindo(a) a Yami Studio! Encontre abaixo nossas informações de contato e junte-se ao nosso servidor no Discord para discutir animes, atualizações e muito mais.
-                    </p>
-                    
-                    <div class="contact-info mt-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="contact-icon me-3 d-flex justify-content-center" style="width: 40px;">
-                                <i class="fab fa-discord fa-2x text-primary"></i>
-                            </div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">Discord</h6>
-                                <p class="mb-0">@sekkon</p>
-                            </div>
-                        </div>
-                        
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="contact-icon me-3 d-flex justify-content-center" style="width: 40px;">
-                                <i class="fas fa-envelope fa-2x text-danger"></i>
-                            </div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">Email</h6>
-                                <p class="mb-0">sekkon@tuta.io</p>
-                            </div>
-                        </div>
-                        
+    <!-- Código corrigido para que os indicadores do carrossel mudem corretamente -->
 
+    <!-- Definição e seleção de animes para o carrossel -->
+    
+    
+        
+    
+
+    <!-- Carrossel somente se houver animes disponíveis -->
+    
+    <div id="animeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores do carrossel -->
+        <div class="carousel-indicators">
+            
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="0" 
+                    class="active" 
+                    aria-current="true" 
+                    aria-label="Slide 1"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="1" 
+                     
+                    aria-current="false" 
+                    aria-label="Slide 2"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="2" 
+                     
+                    aria-current="false" 
+                    aria-label="Slide 3"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="3" 
+                     
+                    aria-current="false" 
+                    aria-label="Slide 4"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="4" 
+                     
+                    aria-current="false" 
+                    aria-label="Slide 5"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="5" 
+                     
+                    aria-current="false" 
+                    aria-label="Slide 6"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
+        </div>
+        
+        <!-- Slides do carrossel -->
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/1575.jpg');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1575-dG7vMMZMF3wk.jpg" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Code Geass Lelouch of the Rebellion R1">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Code Geass Lelouch of the Rebellion R1</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: 22/03/2025
+                                        </span>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('1'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Right side: Discord Widget -->
-                <div class="col-md-6 bg-dark p-4 d-flex align-items-center justify-content-center">
-                    <iframe 
-                        src="https://discord.com/widget?id=596793277852942357&theme=dark" 
-                        width="100%" 
-                        height="300" 
-                        allowtransparency="true" 
-                        frameborder="0" 
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-                    </iframe>
+            </div>
+            
+            <div class="carousel-item ">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/15583.jpg');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15583-Sxd2J4RJdRhj.jpg" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Date A Live (DC)">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Date A Live (DC)</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: 24/03/2025
+                                        </span>
+                                        
+                                        
+                                        
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('2'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-    <!-- Navbar -->
-    <!-- Navbar com Barra de Pesquisa usando apenas Bootstrap 5 -->
-<div class="container d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-    <img class="me-3" src="static/favicon.png" alt="" width="45" height="45">
-    <div class="lh-1">
-        <h1 class="h6 mb-0 text-white lh-1">Yami Studio</h1>
-        <small>Index</small>
-    </div>
-    
-    <div class="ms-auto">
-        <div class="dropdown">
-            <div class="input-group">
-                <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar anime...">
-                <button class="btn btn-outline-light" type="button" id="clearSearch">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button class="btn btn-outline-light dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-filter"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="filterDropdown">
-                    <li><h6 class="dropdown-header">Filtrar por status</h6></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="all">Todos</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="releasing">Em Lançamento</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="batch">Batch</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="rev">Em Revisão</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="planning">Em Planejamento</button></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><button class="dropdown-item" id="resetFilters">Limpar filtros</button></li>
-                </ul>
+            
+            <div class="carousel-item ">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/116605-qmByNsRP3c53.jpg');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116605-uzDakXnaZ1OW.jpg" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Date A Live IV">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Date A Live IV</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: 24/03/2025
+                                        </span>
+                                        
+                                        
+                                        
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('3'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <div class="carousel-item ">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/151380-EWQOtJmxe3JY.jpg');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151380-gvN5PjrybTw2.jpg" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Date A Live V">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Date A Live V</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: 24/03/2025
+                                        </span>
+                                        
+                                        
+                                        
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('4'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item ">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/18153-Pw3uKfv6ZNqP.jpg');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx18153-oDqA9zQzQPOq.png" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Kyoukai no Kanata">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Kyoukai no Kanata</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: 24/03/2025
+                                        </span>
+                                        
+                                        
+                                        
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('5'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item ">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/n20779-XVIkrhIa1mAY.jpg');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20779-MshHufzf39bT.jpg" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Kyoukai no Kanata #0 Shinonome">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Kyoukai no Kanata #0 Shinonome</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: 24/03/2025
+                                        </span>
+                                        
+                                        
+                                        
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('6'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
-        <div id="filterInfo" class="mt-2 small text-light" style="display: none;">
-            <span id="filterBadges" class="d-flex gap-1 flex-wrap"></span>
-        </div>
+        
+        <!-- Controles do carrossel com cor roxa -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+            <span class="bg-purple p-3 rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 48px; height: 48px;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+            <span class="bg-purple p-3 rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 48px; height: 48px;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
     </div>
-</div>
 
-    <!-- Grid view usando apenas classes nativas do Bootstrap 5 com as modificações solicitadas -->
-    <div class="container mb-5">
+    <!-- CSS necessário para os indicadores do carrossel -->
+    <style>
+        /* Estilo para os indicadores do carrossel */
+        .carousel-indicators button {
+            background-color: rgba(255, 255, 255, 0.5) !important;
+        }
+        
+        .carousel-indicators button.active {
+            background-color: #6f42c1 !important; /* Cor roxa para o indicador ativo */
+        }
+    </style>
+    
+    
+    <!-- Navbar moderno -->
+    <!-- Navbar moderno e elegante -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="static/favicon.png" alt="Yami Studio" width="40" height="40" class="me-2">
+        <div>
+          <span class="fw-bold d-block fs-5">Yami Studio</span>
+          <small class="text-muted d-block" style="margin-top: -5px; font-size: 0.7rem;">Index</small>
+        </div>
+      </a>
+      
+      <!-- Botão de toggle para mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Conteúdo colapsável -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Navegação principal -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-home me-1"></i>Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-tags me-1"></i>Categorias
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
+              <li><button class="dropdown-item filter-btn" data-filter="releasing">Em Lançamento</button></li>
+              <li><button class="dropdown-item filter-btn" data-filter="batch">Batch</button></li>
+              <li><button class="dropdown-item filter-btn" data-filter="rev">Em Revisão</button></li>
+              <li><button class="dropdown-item filter-btn" data-filter="planning">Em Planejamento</button></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item" id="resetFilters">Mostrar Todos</button></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/vsJwPayvz3" target="_blank">
+              <i class="fab fa-discord me-1"></i>Discord
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Barra de pesquisa -->
+        <div class="d-flex">
+          <div class="input-group">
+            <span class="input-group-text bg-dark text-light border-secondary">
+              <i class="fas fa-search"></i>
+            </span>
+            <input type="text" id="searchInput" class="form-control bg-dark text-light border-secondary" 
+                   placeholder="Pesquisar anime..." aria-label="Pesquisar">
+            <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Container para exibir os filtros ativos -->
+  <div class="container mt-3" id="filterInfo" style="display: none;">
+    <div class="d-flex align-items-center">
+      <span class="me-2"><i class="fas fa-filter text-light"></i> Filtros:</span>
+      <div id="filterBadges" class="d-flex gap-1 flex-wrap"></div>
+      <button class="btn btn-sm btn-outline-secondary ms-auto" id="clearAllFilters">
+        <i class="fas fa-times me-1"></i>Limpar
+      </button>
+    </div>
+  </div>
+
+    <!-- Grid view para todos os animes -->
+    <div class="container mb-5 mt-5 pt-3">      
         <!-- Centralizando todo o conteúdo -->
         <div class="row justify-content-center">
             <div class="col-12">
@@ -780,80 +1199,6 @@
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
-                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106967-hG1SSeB44Ve5.jpg" class="card-img-top" alt="Miru Tights" style="height: 300px; object-fit: cover;">
-                                
-                                <!-- Data sobreposta na parte superior esquerda -->
-                                <div class="position-absolute top-0 start-0 m-2">
-                                    <span class="badge bg-dark bg-opacity-75 text-light">24/03/2025</span>
-                                </div>
-                                
-                                <!-- Badges como indicadores de status, na parte superior direita -->
-                                <div class="position-absolute top-0 end-0 m-2 d-flex flex-wrap gap-1">
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                    <span class="badge bg-danger animate-pulse"><i class="fas fa-edit"></i></span>
-                                    
-
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- Apenas o título na parte inferior -->
-                            <div class="card-body py-3">
-                                <!-- Título completo com possível quebra de linha -->
-                                <h5 class="card-title mb-0 fs-6 fw-bold text-center" title="Miru Tights">Miru Tights</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('19')" style="cursor: pointer;">
-                            <!-- Container para imagem com data e ícones sobrepostos -->
-                            <div class="position-relative">
-                                <!-- Imagem de capa com altura maior -->
-                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110738-eJhuZEYDp6Mw.png" class="card-img-top" alt="Miru Tights Cosplay Satsuei Tights" style="height: 300px; object-fit: cover;">
-                                
-                                <!-- Data sobreposta na parte superior esquerda -->
-                                <div class="position-absolute top-0 start-0 m-2">
-                                    <span class="badge bg-dark bg-opacity-75 text-light">24/03/2025</span>
-                                </div>
-                                
-                                <!-- Badges como indicadores de status, na parte superior direita -->
-                                <div class="position-absolute top-0 end-0 m-2 d-flex flex-wrap gap-1">
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                    <span class="badge bg-danger animate-pulse"><i class="fas fa-edit"></i></span>
-                                    
-
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- Apenas o título na parte inferior -->
-                            <div class="card-body py-3">
-                                <!-- Título completo com possível quebra de linha -->
-                                <h5 class="card-title mb-0 fs-6 fw-bold text-center" title="Miru Tights Cosplay Satsuei Tights">Miru Tights Cosplay Satsuei Tights</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('20')" style="cursor: pointer;">
-                            <!-- Container para imagem com data e ícones sobrepostos -->
-                            <div class="position-relative">
-                                <!-- Imagem de capa com altura maior -->
                                 <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20832-Kz7PMdGT0JI6.jpg" class="card-img-top" alt="Overlord" style="height: 300px; object-fit: cover;">
                                 
                                 <!-- Data sobreposta na parte superior esquerda -->
@@ -887,7 +1232,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('21')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('19')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -924,7 +1269,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('22')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('20')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -961,7 +1306,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('23')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('21')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -998,7 +1343,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('24')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('22')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1035,7 +1380,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('25')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('23')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1072,7 +1417,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('26')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('24')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1109,7 +1454,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('27')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('25')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1146,7 +1491,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('28')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('26')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1183,7 +1528,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('29')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('27')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1220,7 +1565,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('30')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('28')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1257,7 +1602,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('31')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('29')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1294,7 +1639,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('32')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('30')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1331,7 +1676,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('33')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('31')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1368,7 +1713,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('34')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('32')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1405,7 +1750,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('35')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('33')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1442,7 +1787,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('36')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('34')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1479,7 +1824,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('37')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('35')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1516,7 +1861,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('38')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('36')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -1553,7 +1898,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('39')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('37')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -4423,210 +4768,6 @@
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
                     <h5 class="modal-title" id="animeModalLabel-18">
-                        Miru Tights
-                        
-                        <a href="https://anilist.co/anime/106967" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
-                            <i class="fas fa-arrow-up-right-from-square me-2"></i>AniList
-                        </a>
-                        
-                        <!-- Share Button -->
-                        <button onclick="shareAnime(event, '18', 'Miru Tights', '106967')" class="ms-2 badge bg-info border-0" title="Compartilhar">
-                            <i class="fas fa-share-alt me-2"></i>Compartilhar
-                        </button>
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="anime-details-content">
-                        <!-- Primeira linha: imagem e info -->
-                        <div class="row mb-4">
-                            <!-- Coluna da esquerda: Imagem e informações básicas -->
-                            <div class="col-md-4 mb-4 mb-md-0">
-                                <!-- Imagem de capa -->
-                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106967-hG1SSeB44Ve5.jpg" class="img-fluid rounded mb-3" alt="Miru Tights" style="width: 100%; object-fit: cover;">
-                                
-                                <!-- Informações básicas abaixo da imagem -->
-                                <p class="mb-2">
-                                    <i class="fas fa-calendar-alt me-2"></i> Data: 24/03/2025
-                                </p>
-                                
-                                <!-- Status badges -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    
-                                    
-                                    
-                                    
-                                    <span class="badge bg-danger animate-pulse">
-                                        <i class="fas fa-edit me-1"></i> Em Revisão
-                                    </span>
-                                    
-                                    
-                                </div>
-                                
-                                <!-- Download buttons -->
-                                <div class="d-grid gap-2">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- Coluna da direita: Info e Changelog -->
-                            <div class="col-md-8">
-                                <!-- Seção de Info -->
-                                <!-- Seção de Info -->
-
-<div class="info-section">
-    <h5><i class="fas fa-info-circle me-2"></i>Informações</h5>
-    <div class="info-content">
-        <div class="info-grid">
-            
-
-            
-
-            
-        </div>
-    </div>
-</div>
-
-                                <!-- Seção de Changelog -->
-                                <!-- Seção de Changelog -->
-
-</div>
-</div>
-                                <!-- Seção de Arquivos -->
-                                <!-- Seção de Arquivos - Nova versão com links individuais -->
-<div class="row mt-4">
-    <div class="col-12">
-        <h4 class="mb-3"><i class="fas fa-file-alt me-2"></i>Lista de Arquivos</h4>
-        
-        
-        <!-- Nova exibição de arquivos para modo Batch e outros -->
-        <ul class="list-group mb-4">
-            
-            
-            
-        </ul>
-        
-    </div>
-</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal fade" id="animeModal-19" tabindex="-1" aria-labelledby="animeModalLabel-19" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-19">
-                        Miru Tights Cosplay Satsuei Tights
-                        
-                        <a href="https://anilist.co/anime/110738" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
-                            <i class="fas fa-arrow-up-right-from-square me-2"></i>AniList
-                        </a>
-                        
-                        <!-- Share Button -->
-                        <button onclick="shareAnime(event, '19', 'Miru Tights Cosplay Satsuei Tights', '110738')" class="ms-2 badge bg-info border-0" title="Compartilhar">
-                            <i class="fas fa-share-alt me-2"></i>Compartilhar
-                        </button>
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="anime-details-content">
-                        <!-- Primeira linha: imagem e info -->
-                        <div class="row mb-4">
-                            <!-- Coluna da esquerda: Imagem e informações básicas -->
-                            <div class="col-md-4 mb-4 mb-md-0">
-                                <!-- Imagem de capa -->
-                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110738-eJhuZEYDp6Mw.png" class="img-fluid rounded mb-3" alt="Miru Tights Cosplay Satsuei Tights" style="width: 100%; object-fit: cover;">
-                                
-                                <!-- Informações básicas abaixo da imagem -->
-                                <p class="mb-2">
-                                    <i class="fas fa-calendar-alt me-2"></i> Data: 24/03/2025
-                                </p>
-                                
-                                <!-- Status badges -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    
-                                    
-                                    
-                                    
-                                    <span class="badge bg-danger animate-pulse">
-                                        <i class="fas fa-edit me-1"></i> Em Revisão
-                                    </span>
-                                    
-                                    
-                                </div>
-                                
-                                <!-- Download buttons -->
-                                <div class="d-grid gap-2">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- Coluna da direita: Info e Changelog -->
-                            <div class="col-md-8">
-                                <!-- Seção de Info -->
-                                <!-- Seção de Info -->
-
-<div class="info-section">
-    <h5><i class="fas fa-info-circle me-2"></i>Informações</h5>
-    <div class="info-content">
-        <div class="info-grid">
-            
-
-            
-
-            
-        </div>
-    </div>
-</div>
-
-                                <!-- Seção de Changelog -->
-                                <!-- Seção de Changelog -->
-
-</div>
-</div>
-                                <!-- Seção de Arquivos -->
-                                <!-- Seção de Arquivos - Nova versão com links individuais -->
-<div class="row mt-4">
-    <div class="col-12">
-        <h4 class="mb-3"><i class="fas fa-file-alt me-2"></i>Lista de Arquivos</h4>
-        
-        
-        <!-- Nova exibição de arquivos para modo Batch e outros -->
-        <ul class="list-group mb-4">
-            
-            
-            
-        </ul>
-        
-    </div>
-</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal fade" id="animeModal-20" tabindex="-1" aria-labelledby="animeModalLabel-20" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-20">
                         Overlord
                         
                         <a href="https://anilist.co/anime/20832" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4634,7 +4775,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '20', 'Overlord', '20832')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '18', 'Overlord', '20832')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4888,11 +5029,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-21" tabindex="-1" aria-labelledby="animeModalLabel-21" aria-hidden="true">
+    <div class="modal fade" id="animeModal-19" tabindex="-1" aria-labelledby="animeModalLabel-19" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-21">
+                    <h5 class="modal-title" id="animeModalLabel-19">
                         Overlord II
                         
                         <a href="https://anilist.co/anime/98437" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4900,7 +5041,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '21', 'Overlord II', '98437')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '19', 'Overlord II', '98437')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5154,11 +5295,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-22" tabindex="-1" aria-labelledby="animeModalLabel-22" aria-hidden="true">
+    <div class="modal fade" id="animeModal-20" tabindex="-1" aria-labelledby="animeModalLabel-20" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-22">
+                    <h5 class="modal-title" id="animeModalLabel-20">
                         Overlord III
                         
                         <a href="https://anilist.co/anime/101474" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5166,7 +5307,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '22', 'Overlord III', '101474')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '20', 'Overlord III', '101474')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5420,11 +5561,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-23" tabindex="-1" aria-labelledby="animeModalLabel-23" aria-hidden="true">
+    <div class="modal fade" id="animeModal-21" tabindex="-1" aria-labelledby="animeModalLabel-21" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-23">
+                    <h5 class="modal-title" id="animeModalLabel-21">
                         Overlord IV
                         
                         <a href="https://anilist.co/anime/133844" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5432,7 +5573,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '23', 'Overlord IV', '133844')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '21', 'Overlord IV', '133844')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5686,11 +5827,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-24" tabindex="-1" aria-labelledby="animeModalLabel-24" aria-hidden="true">
+    <div class="modal fade" id="animeModal-22" tabindex="-1" aria-labelledby="animeModalLabel-22" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-24">
+                    <h5 class="modal-title" id="animeModalLabel-22">
                         Owari no Seraph
                         
                         <a href="https://anilist.co/anime/20829" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5698,7 +5839,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '24', 'Owari no Seraph', '20829')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '22', 'Owari no Seraph', '20829')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5788,11 +5929,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-25" tabindex="-1" aria-labelledby="animeModalLabel-25" aria-hidden="true">
+    <div class="modal fade" id="animeModal-23" tabindex="-1" aria-labelledby="animeModalLabel-23" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-25">
+                    <h5 class="modal-title" id="animeModalLabel-23">
                         Owari no Seraph Kyuuketsuki Shahal
                         
                         <a href="https://anilist.co/anime/21586" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5800,7 +5941,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '25', 'Owari no Seraph Kyuuketsuki Shahal', '21586')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '23', 'Owari no Seraph Kyuuketsuki Shahal', '21586')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5890,11 +6031,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-26" tabindex="-1" aria-labelledby="animeModalLabel-26" aria-hidden="true">
+    <div class="modal fade" id="animeModal-24" tabindex="-1" aria-labelledby="animeModalLabel-24" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-26">
+                    <h5 class="modal-title" id="animeModalLabel-24">
                         Puella Magi Madoka Magica the Movie Part I Beginnings (Recap)
                         
                         <a href="https://anilist.co/anime/11977" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5902,7 +6043,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '26', 'Puella Magi Madoka Magica the Movie Part I Beginnings (Recap)', '11977')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '24', 'Puella Magi Madoka Magica the Movie Part I Beginnings (Recap)', '11977')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5992,11 +6133,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-27" tabindex="-1" aria-labelledby="animeModalLabel-27" aria-hidden="true">
+    <div class="modal fade" id="animeModal-25" tabindex="-1" aria-labelledby="animeModalLabel-25" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-27">
+                    <h5 class="modal-title" id="animeModalLabel-25">
                         Puella Magi Madoka Magica the Movie Part II Eternal
                         
                         <a href="https://anilist.co/anime/11979" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6004,7 +6145,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '27', 'Puella Magi Madoka Magica the Movie Part II Eternal', '11979')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '25', 'Puella Magi Madoka Magica the Movie Part II Eternal', '11979')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6094,11 +6235,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-28" tabindex="-1" aria-labelledby="animeModalLabel-28" aria-hidden="true">
+    <div class="modal fade" id="animeModal-26" tabindex="-1" aria-labelledby="animeModalLabel-26" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-28">
+                    <h5 class="modal-title" id="animeModalLabel-26">
                         Puella Magi Madoka Magica the Movie Part III Rebellion
                         
                         <a href="https://anilist.co/anime/11981" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6106,7 +6247,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '28', 'Puella Magi Madoka Magica the Movie Part III Rebellion', '11981')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '26', 'Puella Magi Madoka Magica the Movie Part III Rebellion', '11981')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6196,11 +6337,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-29" tabindex="-1" aria-labelledby="animeModalLabel-29" aria-hidden="true">
+    <div class="modal fade" id="animeModal-27" tabindex="-1" aria-labelledby="animeModalLabel-27" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-29">
+                    <h5 class="modal-title" id="animeModalLabel-27">
                         ReCREATORS
                         
                         <a href="https://anilist.co/anime/97980" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6208,7 +6349,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '29', 'ReCREATORS', '97980')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '27', 'ReCREATORS', '97980')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6298,11 +6439,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-30" tabindex="-1" aria-labelledby="animeModalLabel-30" aria-hidden="true">
+    <div class="modal fade" id="animeModal-28" tabindex="-1" aria-labelledby="animeModalLabel-28" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-30">
+                    <h5 class="modal-title" id="animeModalLabel-28">
                         Sakasama no Patema
                         
                         <a href="https://anilist.co/anime/12477" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6310,7 +6451,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '30', 'Sakasama no Patema', '12477')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '28', 'Sakasama no Patema', '12477')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6400,11 +6541,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-31" tabindex="-1" aria-labelledby="animeModalLabel-31" aria-hidden="true">
+    <div class="modal fade" id="animeModal-29" tabindex="-1" aria-labelledby="animeModalLabel-29" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-31">
+                    <h5 class="modal-title" id="animeModalLabel-29">
                         Sen to Chihiro no Kamikakushi -A Viagem de Chihiro-
                         
                         <a href="https://anilist.co/anime/199" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6412,7 +6553,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '31', 'Sen to Chihiro no Kamikakushi -A Viagem de Chihiro-', '199')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '29', 'Sen to Chihiro no Kamikakushi -A Viagem de Chihiro-', '199')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6502,11 +6643,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-32" tabindex="-1" aria-labelledby="animeModalLabel-32" aria-hidden="true">
+    <div class="modal fade" id="animeModal-30" tabindex="-1" aria-labelledby="animeModalLabel-30" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-32">
+                    <h5 class="modal-title" id="animeModalLabel-30">
                         Sentouin, Hakenshimasu!
                         
                         <a href="https://anilist.co/anime/116588" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6514,7 +6655,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '32', 'Sentouin, Hakenshimasu!', '116588')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '30', 'Sentouin, Hakenshimasu!', '116588')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6604,11 +6745,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-33" tabindex="-1" aria-labelledby="animeModalLabel-33" aria-hidden="true">
+    <div class="modal fade" id="animeModal-31" tabindex="-1" aria-labelledby="animeModalLabel-31" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-33">
+                    <h5 class="modal-title" id="animeModalLabel-31">
                         Shuumatsu no Harem
                         
                         <a href="https://anilist.co/anime/118465" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6616,7 +6757,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '33', 'Shuumatsu no Harem', '118465')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '31', 'Shuumatsu no Harem', '118465')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6706,11 +6847,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-34" tabindex="-1" aria-labelledby="animeModalLabel-34" aria-hidden="true">
+    <div class="modal fade" id="animeModal-32" tabindex="-1" aria-labelledby="animeModalLabel-32" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-34">
+                    <h5 class="modal-title" id="animeModalLabel-32">
                         To LOVE-Ru
                         
                         <a href="https://anilist.co/anime/3455" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6718,7 +6859,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '34', 'To LOVE-Ru', '3455')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '32', 'To LOVE-Ru', '3455')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6808,11 +6949,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-35" tabindex="-1" aria-labelledby="animeModalLabel-35" aria-hidden="true">
+    <div class="modal fade" id="animeModal-33" tabindex="-1" aria-labelledby="animeModalLabel-33" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-35">
+                    <h5 class="modal-title" id="animeModalLabel-33">
                         Tonikaku Kawaii SNS
                         
                         <a href="https://anilist.co/anime/127371" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6820,7 +6961,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '35', 'Tonikaku Kawaii SNS', '127371')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '33', 'Tonikaku Kawaii SNS', '127371')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -6910,11 +7051,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-36" tabindex="-1" aria-labelledby="animeModalLabel-36" aria-hidden="true">
+    <div class="modal fade" id="animeModal-34" tabindex="-1" aria-labelledby="animeModalLabel-34" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-36">
+                    <h5 class="modal-title" id="animeModalLabel-34">
                         Yahari Ore no Seishun Love Comedy wa Machigatteiru. OVA
                         
                         <a href="https://anilist.co/anime/18753" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -6922,7 +7063,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '36', 'Yahari Ore no Seishun Love Comedy wa Machigatteiru. OVA', '18753')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '34', 'Yahari Ore no Seishun Love Comedy wa Machigatteiru. OVA', '18753')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -7012,11 +7153,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-37" tabindex="-1" aria-labelledby="animeModalLabel-37" aria-hidden="true">
+    <div class="modal fade" id="animeModal-35" tabindex="-1" aria-labelledby="animeModalLabel-35" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-37">
+                    <h5 class="modal-title" id="animeModalLabel-35">
                         Youjo Senki
                         
                         <a href="https://anilist.co/anime/21613" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -7024,7 +7165,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '37', 'Youjo Senki', '21613')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '35', 'Youjo Senki', '21613')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -7114,11 +7255,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-38" tabindex="-1" aria-labelledby="animeModalLabel-38" aria-hidden="true">
+    <div class="modal fade" id="animeModal-36" tabindex="-1" aria-labelledby="animeModalLabel-36" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-38">
+                    <h5 class="modal-title" id="animeModalLabel-36">
                         Youjo Senki Movie
                         
                         <a href="https://anilist.co/anime/100878" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -7126,7 +7267,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '38', 'Youjo Senki Movie', '100878')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '36', 'Youjo Senki Movie', '100878')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -7216,11 +7357,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-39" tabindex="-1" aria-labelledby="animeModalLabel-39" aria-hidden="true">
+    <div class="modal fade" id="animeModal-37" tabindex="-1" aria-labelledby="animeModalLabel-37" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-39">
+                    <h5 class="modal-title" id="animeModalLabel-37">
                         Youjo Senki Sabaku no Pasta Daisakusen (ONA)
                         
                         <a href="https://anilist.co/anime/135866" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -7228,7 +7369,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '39', 'Youjo Senki Sabaku no Pasta Daisakusen (ONA)', '135866')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '37', 'Youjo Senki Sabaku no Pasta Daisakusen (ONA)', '135866')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -7324,7 +7465,6 @@
     <script src="static/js/search.js"></script>
     <script src="static/js/share.js"></script>
     
-    
     <script>
         // Array para armazenar referências aos modais
         const animeModals = {};
@@ -7341,6 +7481,17 @@
             // Abre o modal
             animeModals[modalId].show();
         }
+        
+        // Configuração do carrossel para trocar slide automaticamente a cada 6 segundos
+        document.addEventListener('DOMContentLoaded', function() {
+            var animeCarousel = document.getElementById('animeCarousel');
+            if (animeCarousel) {
+                var carousel = new bootstrap.Carousel(animeCarousel, {
+                    interval: 6000,
+                    wrap: true
+                });
+            }
+        });
     </script>
 </body>
 </html>
