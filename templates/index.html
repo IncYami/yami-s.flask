@@ -8,20 +8,138 @@
     
     <!-- Bootstrap 5 CSS -->
     <link href="static/css/bootstrap.css" rel="stylesheet">
-    <link href="static/css/offcanvas-navbar.css" rel="stylesheet">
     <link href="static/css/custom.css" rel="stylesheet">
+    <link href="static/css/carousel.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="static/css/font-awesome.all.css">
 </head>
 
 <body>
-    <!-- Card -->
-    {% include 'index.Card.html' %}
-    <!-- Navbar -->
+    <!-- Código corrigido para que os indicadores do carrossel mudem corretamente -->
+
+    <!-- Definição e seleção de animes para o carrossel -->
+    {% set releasing_animes = anime_projects|selectattr('releasing', 'equalto', true)|list %}
+    {% if releasing_animes|length > 0 %}
+        {% set carousel_animes = releasing_animes[:6] %}
+    {% else %}
+        {% set carousel_animes = anime_projects|random(6) if anime_projects|length > 6 else anime_projects %}
+    {% endif %}
+
+    <!-- Carrossel somente se houver animes disponíveis -->
+    {% if carousel_animes|length > 0 %}
+    <div id="animeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores do carrossel -->
+        <div class="carousel-indicators">
+            {% for i in range(carousel_animes|length) %}
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="{{ i }}" 
+                    {% if i == 0 %}class="active"{% endif %} 
+                    aria-current="{% if i == 0 %}true{% else %}false{% endif %}" 
+                    aria-label="Slide {{ i+1 }}"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            {% endfor %}
+        </div>
+        
+        <!-- Slides do carrossel -->
+        <div class="carousel-inner">
+            {% for anime in carousel_animes %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('{{ anime.banner_url if anime.banner_url else anime.image_url }}');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="{{ anime.image_url }}" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="{{ anime.name }}">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">{{ anime.name }}</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        {% if anime.last_update %}
+                                        <span class="badge bg-warning text-dark animate-pulse">
+                                            <i class="fas fa-sync-alt me-1"></i> Atualizado: {{ anime.formatted_update_date }}
+                                        </span>
+                                        {% endif %}
+                                        
+                                        {% if anime.batch %}
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        {% endif %}
+                                        
+                                        {% if anime.rev %}
+                                        <span class="badge bg-danger animate-pulse">
+                                            <i class="fas fa-edit me-1"></i> Em Revisão
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('{{ loop.index }}'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Controles do carrossel com cor roxa -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+            <span class="bg-purple p-3 rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 48px; height: 48px;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+            <span class="bg-purple p-3 rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 48px; height: 48px;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <!-- CSS necessário para os indicadores do carrossel -->
+    <style>
+        /* Estilo para os indicadores do carrossel */
+        .carousel-indicators button {
+            background-color: rgba(255, 255, 255, 0.5) !important;
+        }
+        
+        .carousel-indicators button.active {
+            background-color: #6f42c1 !important; /* Cor roxa para o indicador ativo */
+        }
+    </style>
+    {% endif %}
+    
+    <!-- Navbar moderno -->
     {% include 'index.Navbar.html' %}
 
-    <!-- Grid view usando apenas classes nativas do Bootstrap 5 com as modificações solicitadas -->
-    <div class="container mb-5">
+    <!-- Grid view para todos os animes -->
+    <div class="container mb-5 mt-5 pt-3">      
         <!-- Centralizando todo o conteúdo -->
         <div class="row justify-content-center">
             <div class="col-12">
@@ -192,7 +310,6 @@
     <script src="static/js/search.js"></script>
     <script src="static/js/share.js"></script>
     
-    
     <script>
         // Array para armazenar referências aos modais
         const animeModals = {};
@@ -209,6 +326,17 @@
             // Abre o modal
             animeModals[modalId].show();
         }
+        
+        // Configuração do carrossel para trocar slide automaticamente a cada 6 segundos
+        document.addEventListener('DOMContentLoaded', function() {
+            var animeCarousel = document.getElementById('animeCarousel');
+            if (animeCarousel) {
+                var carousel = new bootstrap.Carousel(animeCarousel, {
+                    interval: 6000,
+                    wrap: true
+                });
+            }
+        });
     </script>
 </body>
 </html>

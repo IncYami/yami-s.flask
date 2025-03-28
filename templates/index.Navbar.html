@@ -1,35 +1,74 @@
-<!-- Navbar com Barra de Pesquisa usando apenas Bootstrap 5 -->
-<div class="container d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-    <img class="me-3" src="static/favicon.png" alt="" width="45" height="45">
-    <div class="lh-1">
-        <h1 class="h6 mb-0 text-white lh-1">Yami Studio</h1>
-        <small>Index</small>
-    </div>
-    
-    <div class="ms-auto">
-        <div class="dropdown">
-            <div class="input-group">
-                <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar anime...">
-                <button class="btn btn-outline-light" type="button" id="clearSearch">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button class="btn btn-outline-light dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-filter"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="filterDropdown">
-                    <li><h6 class="dropdown-header">Filtrar por status</h6></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="all">Todos</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="releasing">Em Lançamento</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="batch">Batch</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="rev">Em Revisão</button></li>
-                    <li><button class="dropdown-item filter-btn" data-filter="planning">Em Planejamento</button></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><button class="dropdown-item" id="resetFilters">Limpar filtros</button></li>
-                </ul>
-            </div>
+<!-- Navbar moderno e elegante -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="static/favicon.png" alt="Yami Studio" width="40" height="40" class="me-2">
+        <div>
+          <span class="fw-bold d-block fs-5">Yami Studio</span>
+          <small class="text-muted d-block" style="margin-top: -5px; font-size: 0.7rem;">Index</small>
         </div>
-        <div id="filterInfo" class="mt-2 small text-light" style="display: none;">
-            <span id="filterBadges" class="d-flex gap-1 flex-wrap"></span>
+      </a>
+      
+      <!-- Botão de toggle para mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Conteúdo colapsável -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Navegação principal -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-home me-1"></i>Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-tags me-1"></i>Categorias
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
+              <li><button class="dropdown-item filter-btn" data-filter="releasing">Em Lançamento</button></li>
+              <li><button class="dropdown-item filter-btn" data-filter="batch">Batch</button></li>
+              <li><button class="dropdown-item filter-btn" data-filter="rev">Em Revisão</button></li>
+              <li><button class="dropdown-item filter-btn" data-filter="planning">Em Planejamento</button></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item" id="resetFilters">Mostrar Todos</button></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/vsJwPayvz3" target="_blank">
+              <i class="fab fa-discord me-1"></i>Discord
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Barra de pesquisa -->
+        <div class="d-flex">
+          <div class="input-group">
+            <span class="input-group-text bg-dark text-light border-secondary">
+              <i class="fas fa-search"></i>
+            </span>
+            <input type="text" id="searchInput" class="form-control bg-dark text-light border-secondary" 
+                   placeholder="Pesquisar anime..." aria-label="Pesquisar">
+            <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
         </div>
+        
+      </div>
     </div>
-</div>
+  </nav>
+  
+  <!-- Container para exibir os filtros ativos -->
+  <div class="container mt-3" id="filterInfo" style="display: none;">
+    <div class="d-flex align-items-center">
+      <span class="me-2"><i class="fas fa-filter text-light"></i> Filtros:</span>
+      <div id="filterBadges" class="d-flex gap-1 flex-wrap"></div>
+      <button class="btn btn-sm btn-outline-secondary ms-auto" id="clearAllFilters">
+        <i class="fas fa-times me-1"></i>Limpar
+      </button>
+    </div>
+  </div>
