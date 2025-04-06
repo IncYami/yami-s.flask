@@ -5,7 +5,7 @@ Date: 2025-03-24
 Torrent: https://nyaa.si/download/1951650.torrent
 Magnet: magnet:?xt=urn:btih:16bcb77e174efcc30ef7d0856bbb4535c5cd858a&dn=%5BYami%5D%20Date%20A%20Live%20V%20%28BD%201080p%20x264%20FLAC%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
 Cloud: False
-Releasing: True
+Releasing: False
 Changelog: True
 Batch: True
 ```
