@@ -2,9 +2,9 @@
 Anime: Overlord IV
 AnilistID: 133844
 Date: 2024-08-27
-Torrent: False
-Magnet: False
-Cloud: https://cloud.yami-s.com/0:/Overlord/[Yami]%20Overlord%20IV%20(BD%201080p%20HEVC%20FLAC)/
+Torrent: https://nyaa.si/download/1958293.torrent
+Magnet: magnet:?xt=urn:btih:87a665d7e848c01141e2603bcc0463a037092e6e&dn=%5BYami%5D%20Overlord%20IV%20%28BD%201080p%20HEVC%20FLAC%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
+Cloud: False
 Releasing: False
 Changelog: False
 Batch: True
