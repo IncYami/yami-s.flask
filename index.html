@@ -36,6 +36,13 @@
                     style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
             </button>
             
+            <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="1" 
+                     
+                    aria-current="false" 
+                    aria-label="Slide 2"
+                    style="width: 12px; height: 12px; border-radius: 50%; margin: 0 5px; border: none;">
+            </button>
+            
         </div>
         
         <!-- Slides do carrossel -->
@@ -85,6 +92,60 @@
                                     <!-- Botão de detalhes -->
                                     <div class="d-flex gap-2">
                                         <button class="btn btn-light btn-lg" onclick="openAnimeModal('1'); return false;">
+                                            <i class="fas fa-info-circle me-2"></i>Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item ">
+                <!-- Container para o slide com conteúdo sobre o banner -->
+                <div class="position-relative">
+                    <!-- Fundo com imagem do banner ou imagem de capa como fallback -->
+                    <div class="carousel-banner" style="
+                        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), 
+                        url('https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png');
+                        height: 600px;
+                        background-size: cover;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        width: 100vw;
+                    ">
+                    </div>
+                    
+                    <!-- Conteúdo sobreposto -->
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5">
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <!-- Imagem de capa -->
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;" alt="Overlord The Sacred Kingdom">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="col-md-9 text-white">
+                                    <h1 class="fw-bold mb-3 display-4">Overlord The Sacred Kingdom</h1>
+                                    
+                                    <!-- Status badges -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        
+                                        
+                                        
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-box me-1"></i> Batch
+                                        </span>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <!-- Botão de detalhes -->
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light btn-lg" onclick="openAnimeModal('2'); return false;">
                                             <i class="fas fa-info-circle me-2"></i>Detalhes
                                         </button>
                                     </div>
@@ -254,6 +315,45 @@
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
+                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png" class="card-img-top" alt="Overlord The Sacred Kingdom" style="height: 300px; object-fit: cover;">
+                                
+                                <!-- Data sobreposta na parte superior esquerda -->
+                                <div class="position-absolute top-0 start-0 m-2">
+                                    <span class="badge bg-dark bg-opacity-75 text-light">26/04/2025</span>
+                                </div>
+                                
+                                <!-- Badges como indicadores de status, na parte superior direita -->
+                                <div class="position-absolute top-0 end-0 m-2 d-flex flex-wrap gap-1">
+                                    
+
+                                    
+                                    <span class="badge bg-success animate-pulse"><i class="fas fa-film"></i></span>
+                                    
+
+                                    
+                                    <span class="badge bg-primary"><i class="fas fa-box"></i></span>
+                                    
+
+                                    
+
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Apenas o título na parte inferior -->
+                            <div class="card-body py-3">
+                                <!-- Título completo com possível quebra de linha -->
+                                <h5 class="card-title mb-0 fs-6 fw-bold text-center" title="Overlord The Sacred Kingdom">Overlord The Sacred Kingdom</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <!-- Card maior sem borda secundária -->
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('3')" style="cursor: pointer;">
+                            <!-- Container para imagem com data e ícones sobrepostos -->
+                            <div class="position-relative">
+                                <!-- Imagem de capa com altura maior -->
                                 <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20457-ftrNiYhZzgoY.jpg" class="card-img-top" alt="Black Bullet" style="height: 300px; object-fit: cover;">
                                 
                                 <!-- Data sobreposta na parte superior esquerda -->
@@ -287,7 +387,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('3')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('4')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -326,7 +426,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('4')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('5')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -365,7 +465,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('5')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('6')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -404,7 +504,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('6')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('7')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -441,7 +541,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('7')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('8')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -478,7 +578,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('8')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('9')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -515,7 +615,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('9')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('10')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -552,7 +652,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('10')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('11')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -589,7 +689,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('11')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('12')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -626,7 +726,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('12')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('13')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -665,7 +765,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('13')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('14')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -704,7 +804,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('14')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('15')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -743,7 +843,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('15')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('16')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -782,7 +882,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('16')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('17')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -819,7 +919,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('17')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('18')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -856,7 +956,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('18')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('19')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -893,7 +993,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('19')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('20')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -930,7 +1030,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('20')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('21')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -967,7 +1067,7 @@
                     
                     <div class="col">
                         <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('21')" style="cursor: pointer;">
+                        <div class="card h-100 bg-dark" onclick="openAnimeModal('22')" style="cursor: pointer;">
                             <!-- Container para imagem com data e ícones sobrepostos -->
                             <div class="position-relative">
                                 <!-- Imagem de capa com altura maior -->
@@ -998,43 +1098,6 @@
                             <div class="card-body py-3">
                                 <!-- Título completo com possível quebra de linha -->
                                 <h5 class="card-title mb-0 fs-6 fw-bold text-center" title="Overlord IV">Overlord IV</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <!-- Card maior sem borda secundária -->
-                        <div class="card h-100 bg-dark" onclick="openAnimeModal('22')" style="cursor: pointer;">
-                            <!-- Container para imagem com data e ícones sobrepostos -->
-                            <div class="position-relative">
-                                <!-- Imagem de capa com altura maior -->
-                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png" class="card-img-top" alt="Overlord The Sacred Kingdom" style="height: 300px; object-fit: cover;">
-                                
-                                <!-- Data sobreposta na parte superior esquerda -->
-                                <div class="position-absolute top-0 start-0 m-2">
-                                    <span class="badge bg-dark bg-opacity-75 text-light">26/04/2025</span>
-                                </div>
-                                
-                                <!-- Badges como indicadores de status, na parte superior direita -->
-                                <div class="position-absolute top-0 end-0 m-2 d-flex flex-wrap gap-1">
-                                    
-
-                                    
-
-                                    
-                                    <span class="badge bg-primary"><i class="fas fa-box"></i></span>
-                                    
-
-                                    
-
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- Apenas o título na parte inferior -->
-                            <div class="card-body py-3">
-                                <!-- Título completo com possível quebra de linha -->
-                                <h5 class="card-title mb-0 fs-6 fw-bold text-center" title="Overlord The Sacred Kingdom">Overlord The Sacred Kingdom</h5>
                             </div>
                         </div>
                     </div>
@@ -1982,6 +2045,148 @@
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
                     <h5 class="modal-title" id="animeModalLabel-2">
+                        Overlord The Sacred Kingdom
+                        
+                        <a href="https://anilist.co/anime/133845" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
+                            <i class="fas fa-arrow-up-right-from-square me-2"></i>AniList
+                        </a>
+                        
+                        <!-- Share Button -->
+                        <button onclick="shareAnime(event, '2', 'Overlord The Sacred Kingdom', '133845')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                            <i class="fas fa-share-alt me-2"></i>Compartilhar
+                        </button>
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="anime-details-content">
+                        <!-- Primeira linha: imagem e info -->
+                        <div class="row mb-4">
+                            <!-- Coluna da esquerda: Imagem e informações básicas -->
+                            <div class="col-md-4 mb-4 mb-md-0">
+                                <!-- Imagem de capa -->
+                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png" class="img-fluid rounded mb-3" alt="Overlord The Sacred Kingdom" style="width: 100%; object-fit: cover;">
+                                
+                                <!-- Informações básicas abaixo da imagem -->
+                                <p class="mb-2">
+                                    <i class="fas fa-calendar-alt me-2"></i> Data: 26/04/2025
+                                </p>
+                                
+                                <!-- Status badges -->
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    
+                                    
+                                    <span class="badge bg-success animate-pulse">
+                                        <i class="fas fa-film me-1"></i> Em Lançamento
+                                    </span>
+                                    
+                                    
+                                    <span class="badge bg-primary">
+                                        <i class="fas fa-box me-1"></i> Batch
+                                    </span>
+                                    
+                                    
+                                    
+                                </div>
+                                
+                                <!-- Download buttons -->
+                                <div class="d-grid gap-2">
+                                    
+                                    <a href="https://nyaa.si/download/1964148.torrent" class="btn btn-danger" target="_blank">
+                                        <i class="fas fa-file-download me-1"></i> Download Torrent
+                                    </a>
+                                    
+                                    
+                                    
+                                    <a href="magnet:?xt=urn:btih:b5672921ffc09799a5e8fb3234a94ebd5f7bba32&amp;dn=%5BYami%5D%20Overlord%20The%20Sacred%20Kingdom%20%28BD%201080p%20HEVC%20FLAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" class="btn btn-warning" target="_blank">
+                                        <i class="fas fa-magnet me-1"></i> Download Magnet
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Coluna da direita: Info e Changelog -->
+                            <div class="col-md-8">
+                                <!-- Seção de Info -->
+                                <!-- Seção de Info -->
+
+<div class="info-section">
+    <h5><i class="fas fa-info-circle me-2"></i>Informações</h5>
+    <div class="info-content">
+        <div class="info-grid">
+            
+                <div class="info-item video-item">
+                    <div class="info-item-title">Video</div>
+                    <div class="info-item-content">BD Encode 1080p HEVC x265 10-Bits [VCB-Studio]</div>
+                </div>
+            
+
+            
+                <div class="info-item audio-item">
+                    <div class="info-item-title">Audio</div>
+                    <div class="info-item-content">
+                        FLAC 2.0 ja-JP
+                    </div>
+                </div>
+            
+
+            
+                <div class="info-item subs-item">
+                    <div class="info-item-title">Subs</div>
+                    <div class="info-item-content">
+                        Yami pt-BR
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+                                <!-- Seção de Changelog -->
+                                <!-- Seção de Changelog -->
+
+</div>
+</div>
+                                <!-- Seção de Arquivos -->
+                                <!-- Seção de Arquivos - Nova versão com links individuais -->
+<div class="row mt-4">
+    <div class="col-12">
+        <h4 class="mb-3"><i class="fas fa-file-alt me-2"></i>Lista de Arquivos</h4>
+        
+        
+        <!-- Exibir arquivos com links individuais usando List Group do Bootstrap (sem numeração) -->
+        <ul class="list-group mb-4">
+            
+            <li class="list-group-item bg-dark text-light border-secondary py-2">
+                <div class="filename-container mb-2" title="[Yami] Overlord The Sacred Kingdom (BD 1080p HEVC FLAC) [4CDE31CC].mkv">
+                    [Yami] Overlord The Sacred Kingdom (BD 1080p HEVC FLAC) [4CDE31CC].mkv
+                </div>
+                <div class="download-buttons">
+                    
+                    
+                    
+                </div>
+            </li>
+            
+        </ul>
+        
+    </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="animeModal-3" tabindex="-1" aria-labelledby="animeModalLabel-3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="animeModalLabel-3">
                         Black Bullet
                         
                         <a href="https://anilist.co/anime/20457" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -1989,7 +2194,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '2', 'Black Bullet', '20457')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '3', 'Black Bullet', '20457')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -2247,11 +2452,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-3" tabindex="-1" aria-labelledby="animeModalLabel-3" aria-hidden="true">
+    <div class="modal fade" id="animeModal-4" tabindex="-1" aria-labelledby="animeModalLabel-4" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-3">
+                    <h5 class="modal-title" id="animeModalLabel-4">
                         Date A Live (DC)
                         
                         <a href="https://anilist.co/anime/15583" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -2259,7 +2464,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '3', 'Date A Live (DC)', '15583')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '4', 'Date A Live (DC)', '15583')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -2547,11 +2752,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-4" tabindex="-1" aria-labelledby="animeModalLabel-4" aria-hidden="true">
+    <div class="modal fade" id="animeModal-5" tabindex="-1" aria-labelledby="animeModalLabel-5" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-4">
+                    <h5 class="modal-title" id="animeModalLabel-5">
                         Date A Live IV
                         
                         <a href="https://anilist.co/anime/116605" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -2559,7 +2764,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '4', 'Date A Live IV', '116605')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '5', 'Date A Live IV', '116605')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -2836,11 +3041,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-5" tabindex="-1" aria-labelledby="animeModalLabel-5" aria-hidden="true">
+    <div class="modal fade" id="animeModal-6" tabindex="-1" aria-labelledby="animeModalLabel-6" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-5">
+                    <h5 class="modal-title" id="animeModalLabel-6">
                         Date A Live V
                         
                         <a href="https://anilist.co/anime/151380" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -2848,7 +3053,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '5', 'Date A Live V', '151380')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '6', 'Date A Live V', '151380')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3125,11 +3330,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-6" tabindex="-1" aria-labelledby="animeModalLabel-6" aria-hidden="true">
+    <div class="modal fade" id="animeModal-7" tabindex="-1" aria-labelledby="animeModalLabel-7" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-6">
+                    <h5 class="modal-title" id="animeModalLabel-7">
                         Eromanga Sensei OVA
                         
                         <a href="https://anilist.co/anime/100523" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3137,7 +3342,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '6', 'Eromanga Sensei OVA', '100523')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '7', 'Eromanga Sensei OVA', '100523')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3227,11 +3432,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-7" tabindex="-1" aria-labelledby="animeModalLabel-7" aria-hidden="true">
+    <div class="modal fade" id="animeModal-8" tabindex="-1" aria-labelledby="animeModalLabel-8" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-7">
+                    <h5 class="modal-title" id="animeModalLabel-8">
                         Gabriel DropOut
                         
                         <a href="https://anilist.co/anime/21878" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3239,7 +3444,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '7', 'Gabriel DropOut', '21878')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '8', 'Gabriel DropOut', '21878')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3329,11 +3534,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-8" tabindex="-1" aria-labelledby="animeModalLabel-8" aria-hidden="true">
+    <div class="modal fade" id="animeModal-9" tabindex="-1" aria-labelledby="animeModalLabel-9" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-8">
+                    <h5 class="modal-title" id="animeModalLabel-9">
                         Gabriel DropOut Specials
                         
                         <a href="https://anilist.co/anime/98524" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3341,7 +3546,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '8', 'Gabriel DropOut Specials', '98524')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '9', 'Gabriel DropOut Specials', '98524')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3431,11 +3636,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-9" tabindex="-1" aria-labelledby="animeModalLabel-9" aria-hidden="true">
+    <div class="modal fade" id="animeModal-10" tabindex="-1" aria-labelledby="animeModalLabel-10" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-9">
+                    <h5 class="modal-title" id="animeModalLabel-10">
                         Kanata no Astra
                         
                         <a href="https://anilist.co/anime/107663" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3443,7 +3648,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '9', 'Kanata no Astra', '107663')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '10', 'Kanata no Astra', '107663')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3533,11 +3738,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-10" tabindex="-1" aria-labelledby="animeModalLabel-10" aria-hidden="true">
+    <div class="modal fade" id="animeModal-11" tabindex="-1" aria-labelledby="animeModalLabel-11" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-10">
+                    <h5 class="modal-title" id="animeModalLabel-11">
                         Kimi no Na wa. -Your Name.-
                         
                         <a href="https://anilist.co/anime/21519" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3545,7 +3750,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '10', 'Kimi no Na wa. -Your Name.-', '21519')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '11', 'Kimi no Na wa. -Your Name.-', '21519')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3635,11 +3840,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-11" tabindex="-1" aria-labelledby="animeModalLabel-11" aria-hidden="true">
+    <div class="modal fade" id="animeModal-12" tabindex="-1" aria-labelledby="animeModalLabel-12" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-11">
+                    <h5 class="modal-title" id="animeModalLabel-12">
                         Kyokou Suiri
                         
                         <a href="https://anilist.co/anime/107201" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3647,7 +3852,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '11', 'Kyokou Suiri', '107201')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '12', 'Kyokou Suiri', '107201')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -3737,11 +3942,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-12" tabindex="-1" aria-labelledby="animeModalLabel-12" aria-hidden="true">
+    <div class="modal fade" id="animeModal-13" tabindex="-1" aria-labelledby="animeModalLabel-13" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-12">
+                    <h5 class="modal-title" id="animeModalLabel-13">
                         Kyoukai no Kanata
                         
                         <a href="https://anilist.co/anime/18153" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -3749,7 +3954,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '12', 'Kyoukai no Kanata', '18153')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '13', 'Kyoukai no Kanata', '18153')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4026,11 +4231,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-13" tabindex="-1" aria-labelledby="animeModalLabel-13" aria-hidden="true">
+    <div class="modal fade" id="animeModal-14" tabindex="-1" aria-labelledby="animeModalLabel-14" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-13">
+                    <h5 class="modal-title" id="animeModalLabel-14">
                         Kyoukai no Kanata #0 Shinonome
                         
                         <a href="https://anilist.co/anime/20779" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4038,7 +4243,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '13', 'Kyoukai no Kanata #0 Shinonome', '20779')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '14', 'Kyoukai no Kanata #0 Shinonome', '20779')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4194,11 +4399,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-14" tabindex="-1" aria-labelledby="animeModalLabel-14" aria-hidden="true">
+    <div class="modal fade" id="animeModal-15" tabindex="-1" aria-labelledby="animeModalLabel-15" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-14">
+                    <h5 class="modal-title" id="animeModalLabel-15">
                         Kyoukai no Kanata I&#39;LL BE HERE - Kako-hen
                         
                         <a href="https://anilist.co/anime/20768" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4206,7 +4411,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '14', 'Kyoukai no Kanata I&#39;LL BE HERE - Kako-hen', '20768')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '15', 'Kyoukai no Kanata I&#39;LL BE HERE - Kako-hen', '20768')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4362,11 +4567,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-15" tabindex="-1" aria-labelledby="animeModalLabel-15" aria-hidden="true">
+    <div class="modal fade" id="animeModal-16" tabindex="-1" aria-labelledby="animeModalLabel-16" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-15">
+                    <h5 class="modal-title" id="animeModalLabel-16">
                         Kyoukai no Kanata I&#39;LL BE HERE - Mirai-hen
                         
                         <a href="https://anilist.co/anime/20963" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4374,7 +4579,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '15', 'Kyoukai no Kanata I&#39;LL BE HERE - Mirai-hen', '20963')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '16', 'Kyoukai no Kanata I&#39;LL BE HERE - Mirai-hen', '20963')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4530,11 +4735,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-16" tabindex="-1" aria-labelledby="animeModalLabel-16" aria-hidden="true">
+    <div class="modal fade" id="animeModal-17" tabindex="-1" aria-labelledby="animeModalLabel-17" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-16">
+                    <h5 class="modal-title" id="animeModalLabel-17">
                         Magia Record Mahou Shoujo Madoka☆Magica Gaiden
                         
                         <a href="https://anilist.co/anime/104051" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4542,7 +4747,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '16', 'Magia Record Mahou Shoujo Madoka☆Magica Gaiden', '104051')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '17', 'Magia Record Mahou Shoujo Madoka☆Magica Gaiden', '104051')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4632,11 +4837,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-17" tabindex="-1" aria-labelledby="animeModalLabel-17" aria-hidden="true">
+    <div class="modal fade" id="animeModal-18" tabindex="-1" aria-labelledby="animeModalLabel-18" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-17">
+                    <h5 class="modal-title" id="animeModalLabel-18">
                         Mahou Shoujo Site
                         
                         <a href="https://anilist.co/anime/100010" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4644,7 +4849,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '17', 'Mahou Shoujo Site', '100010')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '18', 'Mahou Shoujo Site', '100010')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -4734,11 +4939,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-18" tabindex="-1" aria-labelledby="animeModalLabel-18" aria-hidden="true">
+    <div class="modal fade" id="animeModal-19" tabindex="-1" aria-labelledby="animeModalLabel-19" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-18">
+                    <h5 class="modal-title" id="animeModalLabel-19">
                         Overlord
                         
                         <a href="https://anilist.co/anime/20832" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -4746,7 +4951,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '18', 'Overlord', '20832')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '19', 'Overlord', '20832')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5004,11 +5209,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-19" tabindex="-1" aria-labelledby="animeModalLabel-19" aria-hidden="true">
+    <div class="modal fade" id="animeModal-20" tabindex="-1" aria-labelledby="animeModalLabel-20" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-19">
+                    <h5 class="modal-title" id="animeModalLabel-20">
                         Overlord II
                         
                         <a href="https://anilist.co/anime/98437" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5016,7 +5221,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '19', 'Overlord II', '98437')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '20', 'Overlord II', '98437')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5274,11 +5479,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-20" tabindex="-1" aria-labelledby="animeModalLabel-20" aria-hidden="true">
+    <div class="modal fade" id="animeModal-21" tabindex="-1" aria-labelledby="animeModalLabel-21" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-20">
+                    <h5 class="modal-title" id="animeModalLabel-21">
                         Overlord III
                         
                         <a href="https://anilist.co/anime/101474" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5286,7 +5491,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '20', 'Overlord III', '101474')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '21', 'Overlord III', '101474')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5544,11 +5749,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="animeModal-21" tabindex="-1" aria-labelledby="animeModalLabel-21" aria-hidden="true">
+    <div class="modal fade" id="animeModal-22" tabindex="-1" aria-labelledby="animeModalLabel-22" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-21">
+                    <h5 class="modal-title" id="animeModalLabel-22">
                         Overlord IV
                         
                         <a href="https://anilist.co/anime/133844" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
@@ -5556,7 +5761,7 @@
                         </a>
                         
                         <!-- Share Button -->
-                        <button onclick="shareAnime(event, '21', 'Overlord IV', '133844')" class="ms-2 badge bg-info border-0" title="Compartilhar">
+                        <button onclick="shareAnime(event, '22', 'Overlord IV', '133844')" class="ms-2 badge bg-info border-0" title="Compartilhar">
                             <i class="fas fa-share-alt me-2"></i>Compartilhar
                         </button>
                     </h5>
@@ -5794,144 +5999,6 @@
             <li class="list-group-item bg-dark text-light border-secondary py-2">
                 <div class="filename-container mb-2" title="[Yami] Overlord IV - 13 (BD 1080p HEVC FLAC) [8F3550AA].mkv">
                     [Yami] Overlord IV - 13 (BD 1080p HEVC FLAC) [8F3550AA].mkv
-                </div>
-                <div class="download-buttons">
-                    
-                    
-                    
-                </div>
-            </li>
-            
-        </ul>
-        
-    </div>
-</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal fade" id="animeModal-22" tabindex="-1" aria-labelledby="animeModalLabel-22" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="animeModalLabel-22">
-                        Overlord The Sacred Kingdom
-                        
-                        <a href="https://anilist.co/anime/133845" target="_blank" class="ms-2 badge bg-primary text-decoration-none">
-                            <i class="fas fa-arrow-up-right-from-square me-2"></i>AniList
-                        </a>
-                        
-                        <!-- Share Button -->
-                        <button onclick="shareAnime(event, '22', 'Overlord The Sacred Kingdom', '133845')" class="ms-2 badge bg-info border-0" title="Compartilhar">
-                            <i class="fas fa-share-alt me-2"></i>Compartilhar
-                        </button>
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="anime-details-content">
-                        <!-- Primeira linha: imagem e info -->
-                        <div class="row mb-4">
-                            <!-- Coluna da esquerda: Imagem e informações básicas -->
-                            <div class="col-md-4 mb-4 mb-md-0">
-                                <!-- Imagem de capa -->
-                                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png" class="img-fluid rounded mb-3" alt="Overlord The Sacred Kingdom" style="width: 100%; object-fit: cover;">
-                                
-                                <!-- Informações básicas abaixo da imagem -->
-                                <p class="mb-2">
-                                    <i class="fas fa-calendar-alt me-2"></i> Data: 26/04/2025
-                                </p>
-                                
-                                <!-- Status badges -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    
-                                    
-                                    
-                                    <span class="badge bg-primary">
-                                        <i class="fas fa-box me-1"></i> Batch
-                                    </span>
-                                    
-                                    
-                                    
-                                </div>
-                                
-                                <!-- Download buttons -->
-                                <div class="d-grid gap-2">
-                                    
-                                    <a href="https://nyaa.si/download/1964148.torrent" class="btn btn-danger" target="_blank">
-                                        <i class="fas fa-file-download me-1"></i> Download Torrent
-                                    </a>
-                                    
-                                    
-                                    
-                                    <a href="magnet:?xt=urn:btih:b5672921ffc09799a5e8fb3234a94ebd5f7bba32&amp;dn=%5BYami%5D%20Overlord%20The%20Sacred%20Kingdom%20%28BD%201080p%20HEVC%20FLAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" class="btn btn-warning" target="_blank">
-                                        <i class="fas fa-magnet me-1"></i> Download Magnet
-                                    </a>
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- Coluna da direita: Info e Changelog -->
-                            <div class="col-md-8">
-                                <!-- Seção de Info -->
-                                <!-- Seção de Info -->
-
-<div class="info-section">
-    <h5><i class="fas fa-info-circle me-2"></i>Informações</h5>
-    <div class="info-content">
-        <div class="info-grid">
-            
-                <div class="info-item video-item">
-                    <div class="info-item-title">Video</div>
-                    <div class="info-item-content">BD Encode 1080p HEVC x265 10-Bits [VCB-Studio]</div>
-                </div>
-            
-
-            
-                <div class="info-item audio-item">
-                    <div class="info-item-title">Audio</div>
-                    <div class="info-item-content">
-                        FLAC 2.0 ja-JP
-                    </div>
-                </div>
-            
-
-            
-                <div class="info-item subs-item">
-                    <div class="info-item-title">Subs</div>
-                    <div class="info-item-content">
-                        Yami pt-BR
-                    </div>
-                </div>
-            
-        </div>
-    </div>
-</div>
-
-                                <!-- Seção de Changelog -->
-                                <!-- Seção de Changelog -->
-
-</div>
-</div>
-                                <!-- Seção de Arquivos -->
-                                <!-- Seção de Arquivos - Nova versão com links individuais -->
-<div class="row mt-4">
-    <div class="col-12">
-        <h4 class="mb-3"><i class="fas fa-file-alt me-2"></i>Lista de Arquivos</h4>
-        
-        
-        <!-- Exibir arquivos com links individuais usando List Group do Bootstrap (sem numeração) -->
-        <ul class="list-group mb-4">
-            
-            <li class="list-group-item bg-dark text-light border-secondary py-2">
-                <div class="filename-container mb-2" title="[Yami] Overlord The Sacred Kingdom (BD 1080p HEVC FLAC) [4CDE31CC].mkv">
-                    [Yami] Overlord The Sacred Kingdom (BD 1080p HEVC FLAC) [4CDE31CC].mkv
                 </div>
                 <div class="download-buttons">
                     
